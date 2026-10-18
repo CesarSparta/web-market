@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-soft" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plaza Multipack | Abastecimiento Confiable para Hogar y Negocios en Lima</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#855300",
+            "surface-clean": "#FFFFFF",
+            "on-background": "#131b2e",
+            "tertiary-container": "#004d34",
+            "inverse-primary": "#b2c5ff",
+            "on-tertiary": "#ffffff",
+            "amber-bright": "#EAB308",
+            "surface-container-low": "#f2f3ff",
+            "outline-variant": "#c4c6d3",
+            "primary-container": "#0f3d91",
+            "on-secondary-fixed-variant": "#653e00",
+            "tertiary": "#003422",
+            "on-primary-fixed": "#001848",
+            "emerald-surface": "#ECFDF5",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffddb8",
+            "surface-container": "#eaedff",
+            "surface": "#faf8ff",
+            "surface-container-high": "#e2e7ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#4ec493",
+            "inverse-on-surface": "#eef0ff",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-soft": "#F8FAFC",
+            "secondary-container": "#fea619",
+            "primary-fixed-dim": "#b2c5ff",
+            "surface-variant": "#dae2fd",
+            "surface-container-highest": "#dae2fd",
+            "royal-blue-vivid": "#1D4ED8",
+            "surface-dim": "#d2d9f4",
+            "on-primary-container": "#8eadff",
+            "on-error": "#ffffff",
+            "surface-tint": "#365aaf",
+            "on-secondary-container": "#684000",
+            "error": "#ba1a1a",
+            "inverse-surface": "#283044",
+            "text-muted": "#334155",
+            "surface-bright": "#faf8ff",
+            "tertiary-fixed-dim": "#68dba9",
+            "secondary-fixed-dim": "#ffb95f",
+            "border-hover": "#CBD5E1",
+            "on-surface": "#131b2e",
+            "tertiary-fixed": "#85f8c4",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "border-hairline": "#E2E8F0",
+            "on-secondary": "#ffffff",
+            "outline": "#747783",
+            "on-surface-variant": "#434652",
+            "surface-subtle": "#F1F5F9",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#174296",
+            "primary": "#00286a",
+            "on-tertiary-fixed": "#002114",
+            "background": "#faf8ff",
+            "on-secondary-fixed": "#2a1700"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-xs": "0.375rem",
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "gutter-sm": "1rem",
+            "space-lg": "2rem",
+            "margin-md": "2rem",
+            "margin": "1.25rem",
+            "space-xl": "3rem",
+            "gutter-lg": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "price-card": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "price-hero": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "price-card": ["20px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.015em", fontWeight: "600" }],
+            "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "400" }],
+            "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.005em", fontWeight: "400" }],
+            "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "700" }],
+            "price-hero": ["28px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }],
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "800" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="min-h-full flex flex-col bg-surface-soft text-on-surface antialiased selection:bg-primary selection:text-surface-clean">
+<!-- 1. Top Utility Bar -->
+<aside class="w-full bg-surface-clean border-b border-border-hairline text-on-surface-variant font-label-md text-label-md select-none">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12 h-10 flex items-center justify-between gap-4">
+<!-- Left: Geo Location -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<span>Entregar en: <strong class="text-on-surface font-semibold">Magdalena del Mar, Lima</strong></span>
+<span class="text-outline-variant">|</span>
+<a class="text-royal-blue-vivid hover:underline flex items-center gap-1 font-medium" href="https://wa.me/51931653685?text=Hola,%20deseo%20más%20información">
+<span>Ver cobertura Lima Centro y Oeste</span>
+</a>
+</div>
+<!-- Center: Shipping threshold indicator -->
+<div class="hidden xl:flex items-center gap-3 bg-surface-subtle px-3 py-1 rounded-full border border-border-hairline">
+<span class="material-symbols-outlined text-amber-bright text-[16px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="text-body-sm font-body-sm text-text-muted">Flete Gratis desde S/ 700:</span>
+<div class="w-24 bg-border-hairline h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%;"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold">Faltan S/ 385.00</span>
+</div>
+<!-- Right: Channel Mode Switch & Advisor Contact -->
+<div class="flex items-center gap-4">
+<!-- Dual Mode Toggle (Hogar vs Mayorista) -->
+<div class="inline-flex p-0.5 bg-surface-subtle rounded-lg border border-border-hairline">
+<button class="px-2.5 py-0.5 rounded-md text-label-sm font-label-sm bg-surface-clean text-primary font-bold shadow-sm transition-all duration-150">
+            Hogar (Unidad)
+          </button>
+<button class="px-2.5 py-0.5 rounded-md text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-all duration-150 flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Mayorista (Cajas)
+          </button>
+</div>
+<div class="hidden md:flex items-center gap-1.5 text-text-muted">
+<span class="material-symbols-outlined text-[17px] text-emerald-600">phone_iphone</span>
+<span>Asesor WhatsApp: <strong class="text-on-surface font-semibold">931653685</strong></span>
+</div>
+</div>
+</div>
+</aside>
+<!-- 2. Main Navigation Bar (Shared Component TopNavBar) -->
+<header class="sticky top-0 z-40 bg-surface-clean border-b border-border-hairline shadow-sm">
+<div class="w-full max-w-[1360px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6 py-3.5">
+<!-- Logo Anchor -->
+<a class="flex items-center gap-3 shrink-0 focus:outline-none" href="/">
+<img alt="Logo corporativo Plaza Multipack en Azul Cobalto y Amarillo Cálido" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XWY4HdNtEp1E9VAJyMJrQDIqLFxcLQf-z8pEFW9BZk2Ux99OEmCQNxdoddSvycWSmfBZcosRi0RVwG9Gx7uALEegbHiaKCDNzgiGSDZrmV9Kid0jUDjX1cv-OyDk6Jw97JYVFbxFVMfphMkVj2pboaY7WXI21sMbNfy99wC80eONySP24I4JRbIgYHdOg_WWfIzgwJVhKCBg_Cf3QaygowC0HUrvhmldgQtV7FE765_JYFkZ_ntSHKgokF"/>
+</a>
+<!-- Clean Search Bar with Keyboard Shortcut -->
+<div class="flex-1 max-w-xl hidden md:block">
+<form action="/search" class="relative flex items-center" method="GET">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full pl-10 pr-20 py-2 bg-surface-soft border border-border-hairline rounded-lg text-body-md font-body-md text-on-surface placeholder:text-outline focus:bg-surface-clean focus:border-royal-blue-vivid focus:ring-1 focus:ring-royal-blue-vivid transition-all duration-150 outline-none" placeholder="Buscar entre +3,000 productos: aceites, bolsas kraft, vasos, lejía..." type="search"/>
+<div class="absolute right-3 flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 text-[10px] font-label-sm text-outline-variant bg-surface-clean border border-border-hairline rounded shadow-xs">⌘ K</kbd>
+</div>
+</form>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-3 shrink-0">
+<!-- Recompra Rápida -->
+<a class="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-royal-blue-vivid hover:bg-surface-soft transition-colors duration-150" href="#quick-reorder">
+<span class="material-symbols-outlined text-[19px]">receipt_long</span>
+<span>Recompra Rápida</span>
+</a>
+<!-- Fiscal Account Button with SUNAT Status -->
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-label-md font-label-md text-on-surface hover:bg-surface-soft border border-transparent hover:border-border-hairline transition-all duration-150" href="#sunat-account">
+<div class="w-7 h-7 rounded-full bg-surface-subtle flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div class="text-left hidden xl:block leading-tight">
+<span class="text-[11px] text-text-muted block">Empresas &amp; Clientes</span>
+<span class="font-bold text-primary flex items-center gap-1">Mi Cuenta <span class="material-symbols-outlined text-[13px] text-emerald-600">verified</span></span>
+</div>
+</a>
+<!-- Cart Primary Action Pill -->
+<a class="flex items-center gap-2.5 px-4 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg font-label-lg text-label-lg shadow-sm transition-all duration-150" href="checkout.html">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-2 bg-amber-bright text-on-background text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</div>
+<span class="font-semibold tracking-tight">Mi Carrito (S/ 0.00)</span>
+</a>
+</div>
+</div>
+<!-- Category Direct Links Bar (Shared Component sub-layout) -->
+<nav class="border-t border-border-hairline bg-surface-clean">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6 overflow-x-auto no-scrollbar py-2 text-label-md font-label-md">
+<div class="flex items-center gap-7 shrink-0">
+<!-- Dropdown All Categories Trigger -->
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-soft hover:bg-surface-subtle text-primary font-bold border border-border-hairline transition-colors">
+<span class="material-symbols-outlined text-[18px]">menu</span>
+<span>Todas las Categorías</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Core Taxonomy Links -->
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="catalogo.html">Inicio</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-royal-blue-vivid transition-colors duration-150 flex items-center gap-1" href="catalogo.html">
+            Descartables &amp; Envases
+          </a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-royal-blue-vivid transition-colors duration-150" href="catalogo.html">Abarrotes</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-royal-blue-vivid transition-colors duration-150" href="catalogo.html">Embalaje</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-royal-blue-vivid transition-colors duration-150" href="catalogo.html">Limpieza</a>
+<a class="text-amber-700 font-semibold pb-1 hover:text-amber-800 transition-colors duration-150 flex items-center gap-1" href="catalogo.html">
+<span class="material-symbols-outlined text-[16px] text-amber-500">card_giftcard</span>
+            Campaña Navideña
+          </a>
+<a class="text-emerald-700 font-bold pb-1 hover:text-emerald-800 transition-colors duration-150 flex items-center gap-1" href="catalogo.html">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">inventory_2</span>
+            Precios por Mayor
+          </a>
+</div>
+<!-- Right Quick Tag -->
+<div class="shrink-0 hidden lg:flex items-center gap-2 text-emerald-700 font-medium text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Facturas RUC 20 Validadas SUNAT</span>
+</div>
+</div>
+</nav>
+</header>
+<!-- 3. Hero Section: Luminosa, Espaciosa y Confiable -->
+<section class="w-full bg-surface-clean border-b border-border-hairline py-12 lg:py-16">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & CTAs (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- Institutional Verified Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-surface border border-emerald-200 rounded-full text-emerald-800 font-label-md text-label-md mb-6">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">verified</span>
+<span class="font-bold">SUNAT Activa y Habida</span>
+<span class="text-emerald-400">•</span>
+<span>RUC 20601234567 Plaza Multipack S.A.C.</span>
+</div>
+<!-- Main Clear Headline -->
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight max-w-2xl text-balance">
+            Abastecimiento Confiable para Hogar y Negocios en Lima
+          </h1>
+<!-- Body Description with Generous Breathing Room -->
+<p class="mt-5 text-body-lg font-body-lg text-text-muted max-w-xl leading-relaxed">
+            Distribución directa de descartables gastronómicos, abarrotes al fardo, empaques industriales y limpieza institucional con entrega garantizada en 24 horas y facturación electrónica instantánea.
+          </p>
+<!-- Action Buttons Cluster -->
+<div class="mt-8 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg font-label-lg text-label-lg font-semibold shadow-sm transition-all duration-150" href="catalogo.html">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Explorar Catálogo Mayorista</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-surface-clean hover:bg-surface-soft text-on-surface border border-border-hairline hover:border-royal-blue-vivid rounded-lg font-label-lg text-label-lg font-medium transition-all duration-150" href="https://wa.me/51931653685?text=Hola,%20deseo%20cotizar%20un%20pedido%20al%20por%20mayor" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-emerald-600">chat</span>
+<span>Cotizar por WhatsApp (931653685)</span>
+</a>
+</div>
+<!-- Micro Delivery Guarantees -->
+<div class="mt-8 pt-6 border-t border-border-hairline w-full flex flex-wrap items-center gap-6 text-label-md font-label-md text-text-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Sin mínimo de compra para hogar</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">local_shipping</span>
+<span>Flete gratis en compras desde S/ 700</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>Rutas diarias en Magdalena, San Miguel y Miraflores</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Asymmetric Showcase of Leader Products (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<!-- Background Ambient Glow -->
+<div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl pointer-events-none"></div>
+<div class="relative bg-surface-soft border border-border-hairline rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between pb-3 border-b border-border-hairline">
+<span class="text-label-md font-label-md text-primary font-bold uppercase tracking-wider">Productos de Alta Rotación</span>
+<span class="text-label-sm font-label-sm bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">Despacho Inmediato</span>
+</div>
+<!-- Mini Item 1: Primor 5L / Aceite -->
+<div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
+<img class="w-full h-full object-contain" data-alt="Galon de aceite vegetal Cocinero de cinco litros en envase transparente con etiqueta amarilla, fondo de estudio limpio blanco neutro con iluminacion suave comercial para ecommerce retail mayorista de abarrotes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg"/>
+</div>
+<div>
+<h4 class="text-body-md font-body-md font-bold text-on-surface">Aceite Cocinero Galón 5 Litros</h4>
+<span class="text-body-sm font-body-sm text-text-muted">Abarrotes • Caja x 4 galones</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm line-through text-outline">S/ 58.00</span>
+<p class="text-headline-sm font-headline-sm text-primary">S/ 56.00</p>
+<span class="text-[11px] font-bold text-emerald-700 bg-emerald-surface px-1.5 py-0.5 rounded">S/ 53.50 x mayor</span>
+</div>
+</div>
+<!-- Mini Item 2: Pamolsa Fast 1Lt -->
+<div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
+<img class="w-full h-full object-contain" data-alt="Envase descartable transparente para comida caliente marca Pamolsa Deli con tapa bisagra hermetica sobre fondo blanco puro y minimalista en estilo de fotografia comercial de suministros de restaurantes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUhoGAl8TrTm9Oqgb86p_HobsKZyc51h2C5KyUs5V_3QBNJmZerZygbnDuLBUFs_gb3uKdvv9pedbmp4r2N9FSwkD3zkxOceFGZWQJPZ6Au9vt_D-FP1PXIXwlvo-R39m8UDFjNFW-QXj1aBn1B1M8eXoUgbrB_aGpWcyFpZ27iXX-LTFBgRqN7Reo176BokPYLDhsU23mEZ5ogOUMKhAYqEpBURtJVAB3-VS_4I65cHXSPiDXPtXu5g"/>
+</div>
+<div>
+<h4 class="text-body-md font-body-md font-bold text-on-surface">Envase Pamolsa Deli 1Lt c/ Tapa</h4>
+<span class="text-body-sm font-body-sm text-text-muted">Descartables • Paq. x 25 un</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm line-through text-outline">S/ 12.60</span>
+<p class="text-headline-sm font-headline-sm text-primary">S/ 10.00</p>
+<span class="text-[11px] font-bold text-emerald-700 bg-emerald-surface px-1.5 py-0.5 rounded">Fardo S/ 8.50 c/u</span>
+</div>
+</div>
+<!-- Mini Item 3: Bolsas Kraft 50un -->
+<div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
+<div class="flex items-center gap-3.5">
+<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
+<img class="w-full h-full object-contain" data-alt="Pila ordenada de bolsas de papel kraft ecologico color marron natural resistente para panaderia y delivery de alimentos, fondo blanco de estudio con sombra sutil y atmosfera pulcra y confiable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw"/>
+</div>
+<div>
+<h4 class="text-body-md font-body-md font-bold text-on-surface">Bolsa Kraft N°25 (Paq. x 50un)</h4>
+<span class="text-body-sm font-body-sm text-text-muted">Embalaje • Papel biodegradable</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm line-through text-outline">S/ 17.50</span>
+<p class="text-headline-sm font-headline-sm text-primary">S/ 15.00</p>
+<span class="text-[11px] font-bold text-emerald-700 bg-emerald-surface px-1.5 py-0.5 rounded">Millar S/ 13.00 c/p</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Barra de Confianza (4 Pilares) -->
+<section class="w-full bg-surface-clean py-8 border-b border-border-hairline">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-soft border border-border-hairline">
+<div class="w-10 h-10 rounded-lg bg-emerald-surface border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0">
+<span class="material-symbols-outlined text-[24px]">price_change</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Precios por Escala</h3>
+<p class="mt-1 text-body-sm font-body-sm text-text-muted">Ahorro progresivo directo por fardo, docena o millar para potenciar tu margen comercial.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-soft border border-border-hairline">
+<div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Facturación SUNAT RUC 20</h3>
+<p class="mt-1 text-body-sm font-body-sm text-text-muted">Emisión electrónica automática de facturas y boletas con crédito fiscal conforme a ley.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-soft border border-border-hairline">
+<div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700 shrink-0">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Despacho en 24h Lima</h3>
+<p class="mt-1 text-body-sm font-body-sm text-text-muted">Rutas logísticas propias en Magdalena, San Miguel, Miraflores, Jesús María y distritos clave.</p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-soft border border-border-hairline">
+<div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-200 flex items-center justify-center text-royal-blue-vivid shrink-0">
+<span class="material-symbols-outlined text-[24px]">redeem</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Flete Gratis desde S/ 700</h3>
+<p class="mt-1 text-body-sm font-body-sm text-text-muted">Ahorra el 100% de los costos de envío acumulando tus compras de despensa o negocio.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Categorías Principales (Grid Aireado 6 Tarjetas) -->
+<section class="w-full py-14">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-label-md font-label-md text-royal-blue-vivid font-bold uppercase tracking-wider">Catálogo Especializado</span>
+<h2 class="mt-1 text-headline-lg font-headline-lg text-on-surface tracking-tight">Categorías Principales</h2>
+</div>
+<a class="text-label-lg font-label-lg text-primary hover:text-royal-blue-vivid font-semibold flex items-center gap-1" href="catalogo.html">
+<span>Ver todas las líneas (+18)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 6 Clean Category Bento Cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+<!-- Cat 1 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="catalogo.html">
+<div class="w-16 h-16 rounded-2xl bg-blue-50 text-primary flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">takeout_dining</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Envases y Descartables</h3>
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Pamolsa, bandejas bio</span>
+</a>
+<!-- Cat 2 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="catalogo.html">
+<div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">grocery</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Abarrotes y Aceites</h3>
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Primor, Costeño, Don Vittorio</span>
+</a>
+<!-- Cat 3 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="/collections/bolsa-de-papel-sin-asa">
+<div class="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">shopping_bag</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Bolsas y Embalaje</h3>
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Kraft, polietileno, film stretch</span>
+</a>
+<!-- Cat 4 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="catalogo.html">
+<div class="w-16 h-16 rounded-2xl bg-cyan-50 text-cyan-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">sanitizer</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Limpieza Institucional</h3>
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Clorox, Poett, lejías 5L</span>
+</a>
+<!-- Cat 5 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="/collections/vasos-de-plastico">
+<div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">local_cafe</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Vasos y Copas</h3>
+<span class="mt-1 text-body-sm font-bod
+
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Polipapel, térmicos y bio-resinas</span>
+</a>
+<!-- Cat 6 -->
+<a class="group flex flex-col items-center text-center p-6 bg-surface-clean border border-border-hairline rounded-2xl hover:border-royal-blue-vivid hover:shadow-md transition-all duration-200" href="catalogo.html">
+<div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">card_giftcard</span>
+</div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">Cajas & Campaña</h3>
+<span class="mt-1 text-body-sm font-body-sm text-text-muted">Canastas, fardos y festivos</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- 6. Productos Más Vendidos / Ofertas de Alta Rotación en Lima -->
+<section class="w-full py-12 bg-surface-clean border-b border-border-hairline">
+  <div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-amber-800 font-label-md text-label-md mb-2 font-bold">
+          <span class="material-symbols-outlined text-[16px] text-amber-600">local_fire_department</span>
+          <span>Despacho Rápido en Lima</span>
+        </div>
+        <h2 class="text-headline-lg font-headline-lg text-primary tracking-tight">Productos de Alta Rotación para Negocios</h2>
+      </div>
+      <a href="catalogo.html" class="inline-flex items-center gap-1.5 text-royal-blue-vivid font-bold hover:underline">
+        <span>Ver catálogo completo (+48 descartables)</span>
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Product Grid 4 Columns -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Item 1: Pamolsa Deli 1Lt -->
+      <article class="bg-surface-clean border border-border-hairline hover:border-royal-blue-vivid rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md group">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">100% Bagazo</span>
+            <span class="text-xs text-outline font-mono">PAM-1000L</span>
+          </div>
+          <a href="producto.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
+            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3NlAh_Rk2hGSsCi5acL4ARL7E4fL661DMM75BUoXjq6FobCGBjzHD9S7KgoWE5NV6rIl_Ahp0gDcP_h40suC74NYSKfI_TQKi6ejh5hKhv-pPWWH0lxXX0v7xuxehxzY-sRDaLAmy2Rb2MVaduC1UvtDr4BRoOYLzzRN_-QIMqWzkMYnp3GYV4ZiM2mxlygTg3sPvoczl1eE43cymhTzra0UGIsFXnKVBq3lHg4mnbd7BT4Xp4WQbg" alt="Pamolsa Deli 1Lt">
+          </a>
+          <span class="text-xs font-bold text-primary block mb-1">Pamolsa Bio Line</span>
+          <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
+            <a href="producto.html">Envase Biodegradable Pamolsa Deli 1Lt con Tapa</a>
+          </h3>
+          <p class="text-xs text-text-muted mb-3">Paquete x 25 un o Caja x 200 un con precio distribuidor.</p>
+        </div>
+        <div class="pt-3 border-t border-border-hairline space-y-3">
+          <div class="flex items-baseline justify-between">
+            <span class="text-price-card font-price-card text-primary font-bold">S/ 10.00 <span class="text-xs text-text-muted font-normal">/ pqte</span></span>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-surface px-2 py-0.5 rounded">Caja: S/ 68.00</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden shrink-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, -1) : (this.nextElementSibling.value = Math.max(1, parseInt(this.nextElementSibling.value)-1))" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">-</button>
+              <input type="text" value="1" class="w-8 text-center text-xs font-bold bg-transparent border-none p-0 focus:ring-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, 1) : (this.previousElementSibling.value = parseInt(this.previousElementSibling.value)+1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">+</button>
+            </div>
+            <button onclick="window.PlazaCart.addItem({id:'BIO-PAM-1000L', name:'Envase Biodegradable Pamolsa Deli 1Lt con Tapa', price:10.00, presentation:'Paquete x 25 un', qty: parseInt(this.previousElementSibling.querySelector('input').value)||1, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuAY3NlAh_Rk2hGSsCi5acL4ARL7E4fL661DMM75BUoXjq6FobCGBjzHD9S7KgoWE5NV6rIl_Ahp0gDcP_h40suC74NYSKfI_TQKi6ejh5hKhv-pPWWH0lxXX0v7xuxehxzY-sRDaLAmy2Rb2MVaduC1UvtDr4BRoOYLzzRN_-QIMqWzkMYnp3GYV4ZiM2mxlygTg3sPvoczl1eE43cymhTzra0UGIsFXnKVBq3lHg4mnbd7BT4Xp4WQbg'})" class="flex-1 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+              <span>Añadir</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 2: Aceite Cocinero 5L -->
+      <article class="bg-surface-clean border border-border-hairline hover:border-royal-blue-vivid rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md group">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded-full">Abarrote Horeca</span>
+            <span class="text-xs text-outline font-mono">COC-5L</span>
+          </div>
+          <a href="catalogo.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
+            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg" alt="Aceite Cocinero 5L">
+          </a>
+          <span class="text-xs font-bold text-primary block mb-1">Alicorp Oficial</span>
+          <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
+            <a href="catalogo.html">Aceite Vegetal Cocinero Galón 5 Litros</a>
+          </h3>
+          <p class="text-xs text-text-muted mb-3">Ideal para restaurantes, pollerías y chifas en Lima.</p>
+        </div>
+        <div class="pt-3 border-t border-border-hairline space-y-3">
+          <div class="flex items-baseline justify-between">
+            <span class="text-price-card font-price-card text-primary font-bold">S/ 56.00 <span class="text-xs text-text-muted font-normal">/ galón</span></span>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-surface px-2 py-0.5 rounded">Caja x 4: S/ 214</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden shrink-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, -1) : (this.nextElementSibling.value = Math.max(1, parseInt(this.nextElementSibling.value)-1))" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">-</button>
+              <input type="text" value="1" class="w-8 text-center text-xs font-bold bg-transparent border-none p-0 focus:ring-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, 1) : (this.previousElementSibling.value = parseInt(this.previousElementSibling.value)+1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">+</button>
+            </div>
+            <button onclick="window.PlazaCart.addItem({id:'AB-COC-5L', name:'Aceite Cocinero Galón 5 Litros', price:56.00, presentation:'Bidón 5 Litros', qty: parseInt(this.previousElementSibling.querySelector('input').value)||1, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg', category:'Abarrotes'})" class="flex-1 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+              <span>Añadir</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 3: Reyma 3 Divisiones 9x9 -->
+      <article class="bg-surface-clean border border-border-hairline hover:border-royal-blue-vivid rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md group">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-secondary-fixed text-secondary-container border border-amber-bright/40 text-[11px] font-bold px-2 py-0.5 rounded-full">-15% Oferta</span>
+            <span class="text-xs text-outline font-mono">BIO-REY-99</span>
+          </div>
+          <a href="producto.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
+            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7l23ueJUgNmfr0lfKduRE3U-4goYuTzRxX8Z4nkyXX8Df9Ayk2-LFce0zk-ylVdsENrxuAMXw_-ujaJtMOgBi3U-Y4ICFKVNv7YfLafbqkJ3A1mFea5m6ONQ4KEwlMiHmCm1M_qKvz9kD7cLThHlFyqm5feAf-r_V90ZIL99FgUHfXXYz-VUMtG0oa0aTimx5J3MVwaK77m28HPkSbUlmigLeV63SxdycbFASa4a3Tau2hdb0s7YZdw" alt="Reyma 3 Divisiones">
+          </a>
+          <span class="text-xs font-bold text-primary block mb-1">Reyma EcoPack</span>
+          <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
+            <a href="producto.html">Envase Menú 3 Divisiones Biodegradable 9x9</a>
+          </h3>
+          <p class="text-xs text-text-muted mb-3">Cierre hermético tipo bisagra para viandas ejecutivas.</p>
+        </div>
+        <div class="pt-3 border-t border-border-hairline space-y-3">
+          <div class="flex items-baseline justify-between">
+            <span class="text-price-card font-price-card text-primary font-bold">S/ 12.50 <span class="text-xs text-text-muted font-normal">/ pqte</span></span>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-surface px-2 py-0.5 rounded">Fardo: S/ 10.20 c/u</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden shrink-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, -1) : (this.nextElementSibling.value = Math.max(1, parseInt(this.nextElementSibling.value)-1))" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">-</button>
+              <input type="text" value="1" class="w-8 text-center text-xs font-bold bg-transparent border-none p-0 focus:ring-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, 1) : (this.previousElementSibling.value = parseInt(this.previousElementSibling.value)+1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">+</button>
+            </div>
+            <button onclick="window.PlazaCart.addItem({id:'BIO-REY-99', name:'Envase Menú 3 Divisiones Biodegradable 9x9', price:12.50, presentation:'Paquete x 25 un', qty: parseInt(this.previousElementSibling.querySelector('input').value)||1, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuA7l23ueJUgNmfr0lfKduRE3U-4goYuTzRxX8Z4nkyXX8Df9Ayk2-LFce0zk-ylVdsENrxuAMXw_-ujaJtMOgBi3U-Y4ICFKVNv7YfLafbqkJ3A1mFea5m6ONQ4KEwlMiHmCm1M_qKvz9kD7cLThHlFyqm5feAf-r_V90ZIL99FgUHfXXYz-VUMtG0oa0aTimx5J3MVwaK77m28HPkSbUlmigLeV63SxdycbFASa4a3Tau2hdb0s7YZdw', category:'Descartables'})" class="flex-1 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+              <span>Añadir</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 4: Bolsa Kraft N°25 -->
+      <article class="bg-surface-clean border border-border-hairline hover:border-royal-blue-vivid rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md group">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Eco Embalaje</span>
+            <span class="text-xs text-outline font-mono">EMB-KRA-25</span>
+          </div>
+          <a href="catalogo.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
+            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw" alt="Bolsa Kraft N°25">
+          </a>
+          <span class="text-xs font-bold text-primary block mb-1">Cian Lee Pro</span>
+          <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
+            <a href="catalogo.html">Bolsa de Papel Kraft N°25 (x500u)</a>
+          </h3>
+          <p class="text-xs text-text-muted mb-3">Papel virgen reforzado para delivery sin roturas.</p>
+        </div>
+        <div class="pt-3 border-t border-border-hairline space-y-3">
+          <div class="flex items-baseline justify-between">
+            <span class="text-price-card font-price-card text-primary font-bold">S/ 203.00 <span class="text-xs text-text-muted font-normal">/ fardo</span></span>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-surface px-2 py-0.5 rounded">S/ 0.40 c/u</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden shrink-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, -1) : (this.nextElementSibling.value = Math.max(1, parseInt(this.nextElementSibling.value)-1))" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">-</button>
+              <input type="text" value="1" class="w-8 text-center text-xs font-bold bg-transparent border-none p-0 focus:ring-0">
+              <button onclick="window.PlazaCatalog ? window.PlazaCatalog.adjustCardQty(this, 1) : (this.previousElementSibling.value = parseInt(this.previousElementSibling.value)+1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-border-hairline">+</button>
+            </div>
+            <button onclick="window.PlazaCart.addItem({id:'EMB-KRA-25', name:'Bolsa de Papel Kraft N°25 (x500u)', price:203.00, presentation:'Fardo Comercial x 500u', qty: parseInt(this.previousElementSibling.querySelector('input').value)||1, image:'https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw', category:'Embalaje'})" class="flex-1 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+              <span>Añadir</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Banner Asesoría Personalizada B2B (+20 fardos) -->
+<section class="max-w-[1360px] mx-auto px-6 lg:px-12 py-10">
+  <div class="bg-primary text-surface-clean rounded-2xl p-6 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-md">
+    <div class="relative z-10 space-y-3 max-w-2xl">
+      <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold">
+        <span class="material-symbols-outlined text-[16px]">pallet</span>
+        <span>Atención Corporativa & Distribuidores</span>
+      </div>
+      <h2 class="text-headline-lg font-headline-lg font-extrabold text-surface-clean tracking-tight">
+        ¿Compras más de 20 fardos o pallets completos de descartables?
+      </h2>
+      <p class="text-body-md font-body-md text-surface-container-high/90 leading-relaxed">
+        Obtén cotización formal con crédito fiscal SUNAT, lista de precios para distribuidor y despacho prioritario directo a almacén o cadena de restaurantes en Lima Metropolitana.
+      </p>
+    </div>
+    <div class="relative z-10 flex-shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+      <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-surface-clean font-bold text-label-lg font-label-lg px-6 py-4 rounded-xl transition-colors duration-150 shadow-md" href="https://wa.me/51931653685?text=Hola,%20deseo%20cotizar%20por%20mayor%20más%20de%2020%20fardos%20de%20descartables" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-[22px]">chat</span>
+        <span>Cotizar por WhatsApp Corporativo</span>
+      </a>
+    </div>
+    <!-- Ambient geometric background accent -->
+    <div class="absolute -right-12 -bottom-12 w-80 h-80 bg-royal-blue-vivid/25 rounded-full blur-3xl pointer-events-none"></div>
+  </div>
+</section>
+
+<!-- 8. Zonas de Cobertura Logística en Lima Centro y Oeste -->
+<section class="max-w-[1360px] mx-auto px-6 lg:px-12 py-10">
+  <div class="bg-surface-clean border border-border-hairline rounded-2xl p-6 lg:p-8 shadow-sm">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-border-hairline">
+      <div>
+        <span class="text-xs font-bold text-primary uppercase tracking-wider">Logística Directa</span>
+        <h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Rutas de Despacho Diario en Lima Metropolitana</h3>
+        <p class="text-body-sm text-text-muted mt-1">Nuestras unidades propias salen desde Magdalena del Mar garantizando entregas sin quiebres de stock.</p>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-semibold text-emerald-800 bg-emerald-surface px-3 py-1.5 rounded-lg border border-emerald-300">
+        <span class="material-symbols-outlined text-[16px] text-emerald-600">schedule</span>
+        <span>Entregas de Lunes a Sábado en 24h</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 pt-6 text-center text-xs font-semibold">
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">Magdalena</span>
+        <span class="text-[10px] text-emerald-700 block mt-0.5">Sede Central</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">San Miguel</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Ruta Mañana</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">Jesús María</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Ruta Mañana</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">Pueblo Libre</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Ruta Tarde</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">Miraflores</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Gastro Horeca</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">San Isidro</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Gastro Horeca</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">location_on</span>
+        <span class="text-on-surface">Surquillo</span>
+        <span class="text-[10px] text-text-muted block mt-0.5">Ruta Tarde</span>
+      </div>
+      <div class="p-3 bg-surface-soft border border-border-hairline rounded-xl hover:border-primary transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-primary text-[20px] block mb-1">local_shipping</span>
+        <span class="text-on-surface">Provincias</span>
+        <span class="text-[10px] text-royal-blue-vivid block mt-0.5">Vía Agencias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Institutional Footer (Shared Component JSON Blueprint) -->
+<footer class="bg-surface-soft border-t border-border-hairline mt-12">
+<div class="w-full max-w-[1360px] mx-auto px-6 lg:px-12 py-12 space-y-8">
+<!-- Top Grid: Brand, Contact, Services, Legal -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<!-- Brand Info -->
+<div class="lg:col-span-2 space-y-4">
+<div class="text-headline-sm font-headline-sm font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[26px] text-primary" data-icon="storefront">storefront</span>
+<span>Plaza Multipack S.A.C.</span>
+</div>
+<p class="text-body-sm font-body-sm text-text-muted leading-relaxed max-w-sm">
+Tu aliado estratégico en el abastecimiento mayorista de abarrotes, productos de limpieza y artículos descartables biodegradables para hogares y empresas en Lima Metropolitana.
+</p>
+<div class="text-body-sm font-body-sm text-text-muted space-y-1">
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="location_pin">location_pin</span>
+<span>Jirón José Gálvez 614, Magdalena del Mar, Lima</span>
+</p>
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="phone_enabled">phone_enabled</span>
+<span>Central Telefónica: (01) 931 653 685</span>
+</p>
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="mail">mail</span>
+<span>plazamultipack.online@gmail.com</span>
+</p>
+</div>
+</div>
+<!-- Links Column 1: SUNAT & Facturación -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Gestión Tributaria</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="checkout.html">Facturación Electrónica SUNAT (RUC 20)</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://empaques.iconofact.com/buscar" rel="noopener noreferrer" target="_blank">Boletas y Facturas en Línea</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Términos y Condiciones Mayoristas</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Consultar RUC Habido y Activo</a>
+</li>
+</ul>
+</div>
+<!-- Links Column 2: Despacho & Cobertura -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Logística Lima</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="catalogo.html">Zonas de Despacho Lima</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Seguimiento de Fardos en Ruta</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Tarifas y Envíos Gratis desde S/ 700</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Horarios de Recojo en Tienda</a>
+</li>
+</ul>
+</div>
+<!-- Links Column 3: Atención y Reclamaciones -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Canales de Ayuda</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150 flex items-center gap-1" href="https://wa.me/51931653685">
+<span>Atención por WhatsApp Corporativo</span>
+</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Cambios y Devoluciones</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150 flex items-center gap-1 font-semibold text-secondary" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu_book">menu_book</span>
+<span>Libro de Reclamaciones Virtual</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Fiscal Stamp & Copyright Section -->
+<div class="pt-8 border-t border-border-hairline flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-text-muted">
+<p>
+© 2024 Plaza Multipack S.A.C. RUC 20601234567. Todos los derechos reservados. Facturación Electrónica SUNAT activa y habida.
+</p>
+<!-- Payment Badges / Safe Checkout -->
+<div class="flex items-center gap-3 text-label-sm font-label-sm">
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Yape</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Plin</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Transferencia BCP / BBVA</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Visa / Mastercard</span>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/shared.js"></script>
+</body>
+</html>

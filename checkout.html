@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-soft" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout &amp; Facturación Electrónica SUNAT - Plaza Multipack</title>
+<!-- Fonts & Google Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#855300",
+            "surface-clean": "#FFFFFF",
+            "on-background": "#131b2e",
+            "tertiary-container": "#004d34",
+            "inverse-primary": "#b2c5ff",
+            "on-tertiary": "#ffffff",
+            "amber-bright": "#EAB308",
+            "surface-container-low": "#f2f3ff",
+            "outline-variant": "#c4c6d3",
+            "primary-container": "#0f3d91",
+            "on-secondary-fixed-variant": "#653e00",
+            "tertiary": "#003422",
+            "on-primary-fixed": "#001848",
+            "emerald-surface": "#ECFDF5",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffddb8",
+            "surface-container": "#eaedff",
+            "surface": "#faf8ff",
+            "surface-container-high": "#e2e7ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#4ec493",
+            "inverse-on-surface": "#eef0ff",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-soft": "#F8FAFC",
+            "secondary-container": "#fea619",
+            "primary-fixed-dim": "#b2c5ff",
+            "surface-variant": "#dae2fd",
+            "surface-container-highest": "#dae2fd",
+            "royal-blue-vivid": "#1D4ED8",
+            "surface-dim": "#d2d9f4",
+            "on-primary-container": "#8eadff",
+            "on-error": "#ffffff",
+            "surface-tint": "#365aaf",
+            "on-secondary-container": "#684000",
+            "error": "#ba1a1a",
+            "inverse-surface": "#283044",
+            "text-muted": "#334155",
+            "surface-bright": "#faf8ff",
+            "tertiary-fixed-dim": "#68dba9",
+            "secondary-fixed-dim": "#ffb95f",
+            "border-hover": "#CBD5E1",
+            "on-surface": "#131b2e",
+            "tertiary-fixed": "#85f8c4",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "border-hairline": "#E2E8F0",
+            "on-secondary": "#ffffff",
+            "outline": "#747783",
+            "on-surface-variant": "#434652",
+            "surface-subtle": "#F1F5F9",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#174296",
+            "primary": "#00286a",
+            "on-tertiary-fixed": "#002114",
+            "background": "#faf8ff",
+            "on-secondary-fixed": "#2a1700"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-xs": "0.375rem",
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "gutter-sm": "1rem",
+            "space-lg": "2rem",
+            "margin-md": "2rem",
+            "margin": "1.25rem",
+            "space-xl": "3rem",
+            "gutter-lg": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "price-card": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "price-hero": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "price-card": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "price-hero": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="min-h-screen bg-surface-soft text-on-surface antialiased flex flex-col font-body-md text-body-md">
+<!-- 1. HEADER DE CHECKOUT MINIMALISTA & SEGURO -->
+<header class="bg-surface-clean border-b border-border-hairline sticky top-0 z-40 shadow-sm">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
+<!-- Logo Oficial Plaza Multipack -->
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Plaza Multipack" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XWY4HdNtEp1E9VAJyMJrQDIqLFxcLQf-z8pEFW9BZk2Ux99OEmCQNxdoddSvycWSmfBZcosRi0RVwG9Gx7uALEegbHiaKCDNzgiGSDZrmV9Kid0jUDjX1cv-OyDk6Jw97JYVFbxFVMfphMkVj2pboaY7WXI21sMbNfy99wC80eONySP24I4JRbIgYHdOg_WWfIzgwJVhKCBg_Cf3QaygowC0HUrvhmldgQtV7FE765_JYFkZ_ntSHKgokF"/>
+<span class="hidden sm:inline-block pl-3 border-l border-border-hairline text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+          Portal de Pago Seguro
+        </span>
+</a>
+<!-- Métricas de Confianza & Asistencia Inmediata -->
+<div class="flex items-center gap-6">
+<!-- Indicador de Compra Segura SSL -->
+<div class="flex items-center gap-2 text-on-surface-variant bg-surface-subtle px-3 py-1.5 rounded-full border border-border-hairline">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface">Encriptación SSL 256-bit</span>
+</div>
+<!-- Asistencia WhatsApp Directa -->
+<a class="flex items-center gap-2 text-on-surface hover:text-royal-blue-vivid transition-colors duration-150" href="https://wa.me/51931653685?text=Hola,%20tengo%20una%20consulta%20con%20mi%20proceso%20de%20facturaci%C3%B3n" rel="noopener noreferrer" target="_blank">
+<div class="w-8 h-8 rounded-full bg-emerald-surface flex items-center justify-center border border-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container" data-icon="support_agent">support_agent</span>
+</div>
+<div class="hidden md:flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Asesor en Línea</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">📞 931 653 685</span>
+</div>
+</a>
+</div>
+</div>
+</header>
+<!-- 2. STEPPER DE PROGRESO DE CHECKOUT -->
+<div class="bg-surface-clean border-b border-border-hairline py-4">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+<div class="flex items-center justify-center max-w-2xl mx-auto">
+<!-- Paso 1: Activo -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-surface-clean flex items-center justify-center font-label-md text-label-md font-bold shadow-sm">
+            1
+          </div>
+<span class="font-label-lg text-label-lg font-bold text-primary-container">
+            Identificación &amp; Facturación
+          </span>
+</div>
+<div class="w-12 h-0.5 bg-border-hairline mx-3"></div>
+<!-- Paso 2: Datos de Entrega -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-subtle text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-semibold border border-border-hairline">
+            2
+          </div>
+<span class="font-label-lg text-label-lg text-on-surface-variant">
+            Dirección Lima
+          </span>
+</div>
+<div class="w-12 h-0.5 bg-border-hairline mx-3"></div>
+<!-- Paso 3: Pago -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-subtle text-on-surface-variant flex items-center justify-center font-label-md text-label-md font-semibold border border-border-hairline">
+            3
+          </div>
+<span class="font-label-lg text-label-lg text-on-surface-variant">
+            Pago Seguro
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN CANVAS: 2 COLUMNAS (60% Formulario / 40% Resumen de Pedido) -->
+<main class="flex-grow max-w-[1360px] w-full mx-auto px-6 lg:px-12 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- COLUMNA IZQUIERDA: FORMULARIOS FISCALES Y DE ENTREGA (7 de 12 = ~58-60%) -->
+<section class="lg:col-span-7 space-y-6">
+<!-- PASO 1: FACTURACIÓN ELECTRÓNICA SUNAT -->
+<div class="bg-surface-clean rounded-xl border border-border-hairline p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 border-b border-border-hairline mb-5">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-primary-container text-surface-clean flex items-center justify-center font-label-md text-label-md font-bold">
+                1
+              </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Comprobante de Pago &amp; Datos Fiscales
+              </h2>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-surface text-tertiary-container font-label-sm text-label-sm font-semibold border border-tertiary-fixed">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Emisión SUNAT Oficial
+            </span>
+</div>
+<!-- Selector Segmentado: Boleta vs Factura -->
+<div class="mb-5">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">
+              Seleccione el tipo de comprobante requerido para su compra:
+            </label>
+<div class="grid grid-cols-2 gap-3 p-1 bg-surface-subtle rounded-lg border border-border-hairline">
+<button class="py-2.5 px-4 rounded-md font-label-lg text-label-lg transition-all duration-150 text-on-surface-variant hover:text-on-surface text-center flex items-center justify-center gap-2" id="btn-boleta" onclick="toggleComprobante('boleta')" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="person">person</span>
+                Boleta de Venta (DNI)
+              </button>
+<button class="py-2.5 px-4 rounded-md font-label-lg text-label-lg font-bold bg-surface-clean text-primary-container border border-border-hairline shadow-sm text-center flex items-center justify-center gap-2" id="btn-factura" onclick="toggleComprobante('factura')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-container" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+                Factura Electrónica (RUC 10 / 20)
+              </button>
+</div>
+</div>
+<!-- Formulario Dinámico de Factura Electrónica (ACTIVO POR DEFECTO) -->
+<div class="space-y-4" id="panel-factura">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5" for="ruc-input">
+                Número de RUC (RUC 20 Empresas o RUC 10 Persona con Negocio)
+              </label>
+<div class="flex gap-2">
+<div class="relative flex-grow">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]" data-icon="badge">badge</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid focus:border-royal-blue-vivid tracking-wider" id="ruc-input" maxlength="11" placeholder="Ej. 20601234567" type="text" value="20601234567"/>
+</div>
+<button class="px-5 py-2.5 bg-primary-container text-surface-clean rounded-lg font-label-lg text-label-lg font-semibold hover:bg-royal-blue-vivid transition-colors duration-150 flex items-center gap-1.5 shadow-sm whitespace-nowrap" id="btn-validar-ruc" onclick="triggerSunatValidation()" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="manage_search">manage_search</span>
+                  Validar SUNAT
+                </button>
+</div>
+</div>
+<!-- Recuadro Verde de Validación SUNAT Exitosa -->
+<div class="p-3.5 bg-emerald-surface rounded-lg border border-tertiary-fixed flex items-start gap-3" id="sunat-status-box">
+<span class="material-symbols-outlined text-tertiary-container text-[20px] mt-0.5" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-grow text-body-sm font-body-sm">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-bold text-tertiary-container uppercase">✅ Razón Social:</span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">GASTRONOMÍA LIMA S.A.C.</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Estado: <strong class="text-tertiary-container">ACTIVO</strong></span>
+<span>•</span>
+<span>Condición: <strong class="text-tertiary-container">HABIDO</strong></span>
+<span>•</span>
+<span class="text-text-muted">Afecto a IGV 18%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Correo para Recepción de XML y PDF
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" type="email" value="administracion@gastronomialima.pe"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Teléfono de Contacto Contable
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" type="tel" value="987 654 321"/>
+</div>
+</div>
+</div>
+<!-- Panel Boleta (Oculto inicialmente) -->
+<div class="space-y-4 hidden" id="panel-boleta">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Número de DNI / CE
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" maxlength="9" placeholder="Ej. 45892314" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Nombres y Apellidos Completos
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" placeholder="Ej. Carlos Mendoza Quispe" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- PASO 2: DATOS DE ENTREGA EN LIMA -->
+<div class="bg-surface-clean rounded-xl border border-border-hairline p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 border-b border-border-hairline mb-5">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-subtle text-on-surface-variant border border-border-hairline flex items-center justify-center font-label-md text-label-md font-bold">
+                2
+              </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Dirección de Entrega en Lima
+              </h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="local_shipping">local_shipping</span>
+              Despacho en Unidades Propias
+            </span>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Departamento / Ciudad
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-subtle border border-border-hairline rounded-lg font-body-md text-body-md text-text-muted cursor-not-allowed" readonly="" type="text" value="Lima Metropolitana"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Distrito de Lima
+                </label>
+<div class="relative">
+<select class="w-full appearance-none px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid">
+<option selected="">Magdalena del Mar (Sede Central Cercana)</option>
+<option>San Miguel</option>
+<option>Jesús María</option>
+<option>Miraflores</option>
+<option>San Isidro</option>
+<option>Pueblo Libre</option>
+<option>Surco / La Molina</option>
+</select>
+<span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                Dirección Exacta (Calle, Av., Jr., N° y Dpto/Local)
+              </label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" placeholder="Ej. Jr. José Gálvez 614" type="text" value="Jirón Bolognesi 482, Local Comercial 102"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Referencia de Llegada
+                </label>
+<input class="w-full px-3.5 py-2.5 bg-surface-clean border border-border-hairline rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid" placeholder="Ej. Portón blanco, frente al parque" type="text" value="A media cuadra del Mercado de Magdalena"/>
+</div>
+<!-- Fecha y Turno de Entrega -->
+<div>
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-1.5">
+                  Turno de Despacho Programado
+                </label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2.5 border border-royal-blue-vivid bg-surface-clean rounded-lg cursor-pointer">
+<input checked="" class="text-royal-blue-vivid focus:ring-royal-blue-vivid" name="turno" type="radio"/>
+<div class="text-left leading-tight">
+<span class="block font-label-sm text-label-sm font-bold text-on-surface">Mañana</span>
+<span class="block text-[11px] text-on-surface-variant">9:00 - 13:00</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2.5 border border-border-hairline bg-surface-clean rounded-lg cursor-pointer hover:bg-surface-subtle">
+<input class="text-royal-blue-vivid focus:ring-royal-blue-vivid" name="turno" type="radio"/>
+<div class="text-left leading-tight">
+<span class="block font-label-sm text-label-sm font-bold text-on-surface">Tarde</span>
+<span class="block text-[11px] text-on-surface-variant">14:00 - 18:30</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PASO 3: MÉTODO DE PAGO PERUANO B2B / B2C -->
+<div class="bg-surface-clean rounded-xl border border-border-hairline p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 border-b border-border-hairline mb-5">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-subtle text-on-surface-variant border border-border-hairline flex items-center justify-center font-label-md text-label-md font-bold">
+                3
+              </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Método de Pago Seguro
+              </h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">
+              Sin comisiones adicionales
+            </span>
+</div>
+<div class="space-y-3">
+<!-- Opción 1: Yape / Plin con QR -->
+<label class="relative flex items-start p-4 border-2 border-royal-blue-vivid bg-surface-clean rounded-xl cursor-pointer transition-all duration-150">
+<input checked="" class="mt-1 text-royal-blue-vivid focus:ring-royal-blue-vivid" name="metodo-pago" type="radio"/>
+<div class="ml-3.5 flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                    Yape / Plin (Confirmación Inmediata)
+                  </span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#73228B]/10 text-[#73228B]">YAPE</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#00BCD4]/10 text-[#00838F]">PLIN</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Escanea el QR oficial de Plaza Multipack o transfiere directo al número verificado <strong>931 653 685</strong>.
+                </p>
+<!-- Mini Panel QR Interactivo -->
+<div class="mt-3 p-3 bg-surface-subtle rounded-lg border border-border-hairline flex items-center gap-4">
+<div class="w-16 h-16 bg-surface-clean border border-border-hairline rounded flex items-center justify-center flex-shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[36px] text-on-surface" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">
+<p class="font-semibold text-on-surface">Titular: Plaza Multipack S.A.C.</p>
+<p class="text-[12px]">Adjunta la captura al finalizar o por el canal WhatsApp.</p>
+</div>
+</div>
+</div>
+</label>
+<!-- Opción 2: Tarjetas Débito / Crédito -->
+<label class="relative flex items-start p-4 border border-border-hairline bg-surface-clean rounded-xl cursor-pointer hover:border-border-hover transition-all duration-150">
+<input class="mt-1 text-royal-blue-vivid focus:ring-royal-blue-vivid" name="metodo-pago" type="radio"/>
+<div class="ml-3.5 flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">
+                    Tarjeta de Débito / Crédito
+                  </span>
+<div class="flex items-center gap-2 text-on-surface-variant text-[11px] font-semibold">
+<span>Visa</span> • <span>Mastercard</span> • <span>Amex</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Pasarela procesada con autenticación SUNAT 3D Secure 2.0.
+                </p>
+</div>
+</label>
+<!-- Opción 3: Transferencia Bancaria Directa BCP / BBVA (Empresas) -->
+<label class="relative flex items-start p-4 border border-border-hairline bg-surface-clean rounded-xl cursor-pointer hover:border-border-hover transition-all duration-150">
+<input class="mt-1 text-royal-blue-vivid focus:ring-royal-blue-vivid" name="metodo-pago" type="radio"/>
+<div class="ml-3.5 flex-grow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">
+                    Transferencia Bancaria BCP / BBVA (RUC 20 Mayoristas)
+                  </span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-surface text-tertiary-container border border-tertiary-fixed">
+                    Recomendado HORECA
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Cuentas Corrientes en Soles a nombre de Plaza Multipack S.A.C.
+                </p>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- COLUMNA DERECHA: CARD STICKY DE RESUMEN DE COMPRA (5 de 12 = ~40%) -->
+<aside class="lg:col-span-5 sticky top-24 space-y-4">
+<div class="bg-surface-clean rounded-xl border border-border-hairline shadow-sm overflow-hidden">
+<!-- Encabezado Resumen -->
+<div class="p-5 border-b border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]" data-icon="shopping_basket" style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Resumen de Compra
+              </h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-subtle border border-border-hairline text-on-surface-variant font-label-sm text-label-sm font-bold">
+              3 Ítems
+            </span>
+</div>
+<!-- Alerta de Flete Gratis Cumplido -->
+<div class="mx-5 mt-4 p-3.5 bg-emerald-surface border border-tertiary-fixed rounded-lg flex items-center gap-3">
+<span class="text-xl">🎉</span>
+<div class="text-body-sm font-body-sm">
+<p class="font-bold text-tertiary-container">¡Tu pedido califica para Envío Gratis!</p>
+<p class="text-[11px] text-on-surface-variant">Despacho bonificado sin costo a Magdalena del Mar.</p>
+</div>
+</div>
+<!-- Lista de Ítems Adquiridos -->
+<div class="p-5 space-y-4 max-h-[320px] overflow-y-auto divide-y divide-border-hairline">
+<!-- Item 1: Pamolsa -->
+<div class="pt-3 first:pt-0 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-soft border border-border-hairline flex items-center justify-center flex-shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">
+                    Envase Pamolsa Deli 1Lt c/tapa
+                  </h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px]">
+<span class="font-medium">4 Cajas (x100u)</span>
+<span>•</span>
+<span class="text-tertiary-container font-semibold">Pack Mayorista</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">S/ 240.00</span>
+<span class="text-[11px] text-on-surface-variant">S/ 60.00 c/u</span>
+</div>
+</div>
+<!-- Item 2: Aceite Primor 5L -->
+<div class="pt-3 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-soft border border-border-hairline flex items-center justify-center flex-shrink-0 text-amber-bright">
+<span class="material-symbols-outlined text-[24px]" data-icon="water_drop" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">
+                    Aceite Primor Clásico Galón 5L
+                  </h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px]">
+<span class="font-medium">2 Bidones</span>
+<span>•</span>
+<span class="text-text-muted">Consumo Horeca</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">S/ 112.00</span>
+<span class="text-[11px] text-on-surface-variant">S/ 56.00 c/u</span>
+</div>
+</div>
+<!-- Item 3: Bolsas Kraft x 500u -->
+<div class="pt-3 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-soft border border-border-hairline flex items-center justify-center flex-shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[24px]" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">
+                    Bolsa Papel Kraft N°25 (x500u)
+                  </h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-[12px]">
+<span class="font-medium">1 Fardo Comercial</span>
+<span>•</span>
+<span class="text-tertiary-container font-semibold">Eco Embalaje</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">S/ 203.00</span>
+<span class="text-[11px] text-on-surface-variant">S/ 203.00 c/u</span>
+</div>
+</div>
+</div>
+<!-- Desglose Contable Peruano Oficial (SUNAT) -->
+<div class="p-5 bg-surface-subtle/50 border-t border-border-hairline space-y-2.5">
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Subtotal Valor Venta Gravado:</span>
+<span class="font-semibold text-on-surface">S/ 470.34</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Impuesto General a las Ventas (IGV 18%):</span>
+<span class="font-semibold text-on-surface">S/ 84.66</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-tertiary-container font-semibold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="savings">savings</span>
+                Ahorro Mayorista Aplicado:
+              </span>
+<span>- S/ 46.20</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Costo de Despacho (Lima Metropolitana):</span>
+<span class="font-bold text-tertiary-container uppercase tracking-wide">Gratis (S/ 0.00)</span>
+</div>
+<div class="pt-3 border-t border-border-hairline flex items-baseline justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block">Total a Pagar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">En Soles (PEN) con IGV incluido</span>
+</div>
+<span class="font-price-hero text-price-hero font-extrabold text-primary-container">
+                S/ 555.00
+              </span>
+</div>
+</div>
+<!-- Botón Principal Full-Width -->
+<div class="p-5 bg-surface-clean border-t border-border-hairline">
+<button class="w-full py-3.5 px-6 bg-primary-container text-surface-clean rounded-lg font-label-lg text-label-lg font-bold shadow-md hover:bg-royal-blue-vivid active:bg-primary transition-all duration-150 flex items-center justify-center gap-2 group cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-150 group-hover:scale-110" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+              Confirmar y Pagar Pedido (S/ 555.00)
+            </button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-2.5 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container" data-icon="verified_user">verified_user</span>
+              Emisión inmediata de Comprobante Electrónico SUNAT
+            </p>
+</div>
+</div>
+<!-- Sellos de Seguridad y Cumplimiento -->
+<div class="bg-surface-clean rounded-xl border border-border-hairline p-4 space-y-3 shadow-sm">
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface-variant">
+<div class="w-7 h-7 rounded-full bg-emerald-surface flex items-center justify-center text-tertiary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified">verified</span>
+</div>
+<span><strong>Facturación Electrónica SUNAT:</strong> RUC 20 habida con envío directo a tu correo.</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface-variant">
+<div class="w-7 h-7 rounded-full bg-surface-subtle flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="shield">shield</span>
+</div>
+<span><strong>Protección de Datos:</strong> Ley N° 29733 de Protección de Datos Personales Perú.</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface-variant">
+<div class="w-7 h-7 rounded-full bg-amber-bright/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="published_with_changes">published_with_changes</span>
+</div>
+<span><strong>Atención Postventa:</strong> Asesoría en ruta vía WhatsApp directo 931653685.</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- 4. FOOTER INSTITUCIONAL COMPACTO (Apegado al Shared Components JSON) -->
+<footer class="bg-surface-soft border-t border-border-hairline py-8 mt-12 text-on-surface-variant">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-border-hairline pb-6 text-center md:text-left">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">
+            Plaza Multipack S.A.C.
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Jirón José Gálvez 614, Magdalena del Mar, Lima — Central de Pedidos: 931 653 685
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4 text-body-sm font-body-sm">
+<a class="hover:text-primary transition-colors" href="#">Facturación Electrónica SUNAT (RUC 20)</a>
+<span class="text-border-hairline">•</span>
+<a class="hover:text-primary transition-colors" href="#">Boletas y Facturas en Línea</a>
+<span class="text-border-hairline">•</span>
+<a class="hover:text-primary transition-colors" href="#">Zonas de Despacho Lima</a>
+<span class="text-border-hairline">•</span>
+<a class="hover:text-primary transition-colors" href="#">Libro de Reclamaciones Virtual</a>
+</div>
+</div>
+<div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center text-body-sm font-body-sm text-text-muted">
+<p>© 2024 Plaza Multipack S.A.C. RUC 20601234567. Todos los derechos reservados. Facturación Electrónica SUNAT activa y habida.</p>
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Servidores SUNAT Operativos</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Microinteracción Vanilla JS: Selector de Comprobante Fiscal & Simulación SUNAT -->
+
+  <script src="js/cart.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/checkout.js"></script>
+</body></html>
+

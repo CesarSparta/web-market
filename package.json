@@ -1,0 +1,13 @@
+{
+  "name": "plaza-multipack-web",
+  "version": "1.0.0",
+  "description": "Plaza Multipack S.A.C. - Plataforma de Abastecimiento Mayorista y Descartables Biodegradables en Lima",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["ecommerce", "peru", "pamolsa", "descartables", "b2b", "sunat"],
+  "author": "Plaza Multipack S.A.C.",
+  "license": "ISC"
+}

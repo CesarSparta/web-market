@@ -1,0 +1,963 @@
+
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-soft" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Envases y Descartables Biodegradables | Plaza Multipack Mayorista</title>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#855300",
+            "surface-clean": "#FFFFFF",
+            "on-background": "#131b2e",
+            "tertiary-container": "#004d34",
+            "inverse-primary": "#b2c5ff",
+            "on-tertiary": "#ffffff",
+            "amber-bright": "#EAB308",
+            "surface-container-low": "#f2f3ff",
+            "outline-variant": "#c4c6d3",
+            "primary-container": "#0f3d91",
+            "on-secondary-fixed-variant": "#653e00",
+            "tertiary": "#003422",
+            "on-primary-fixed": "#001848",
+            "emerald-surface": "#ECFDF5",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffddb8",
+            "surface-container": "#eaedff",
+            "surface": "#faf8ff",
+            "surface-container-high": "#e2e7ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#4ec493",
+            "inverse-on-surface": "#eef0ff",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-soft": "#F8FAFC",
+            "secondary-container": "#fea619",
+            "primary-fixed-dim": "#b2c5ff",
+            "surface-variant": "#dae2fd",
+            "surface-container-highest": "#dae2fd",
+            "royal-blue-vivid": "#1D4ED8",
+            "surface-dim": "#d2d9f4",
+            "on-primary-container": "#8eadff",
+            "on-error": "#ffffff",
+            "surface-tint": "#365aaf",
+            "on-secondary-container": "#684000",
+            "error": "#ba1a1a",
+            "inverse-surface": "#283044",
+            "text-muted": "#334155",
+            "surface-bright": "#faf8ff",
+            "tertiary-fixed-dim": "#68dba9",
+            "secondary-fixed-dim": "#ffb95f",
+            "border-hover": "#CBD5E1",
+            "on-surface": "#131b2e",
+            "tertiary-fixed": "#85f8c4",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#dae2ff",
+            "border-hairline": "#E2E8F0",
+            "on-secondary": "#ffffff",
+            "outline": "#747783",
+            "on-surface-variant": "#434652",
+            "surface-subtle": "#F1F5F9",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#174296",
+            "primary": "#00286a",
+            "on-tertiary-fixed": "#002114",
+            "background": "#faf8ff",
+            "on-secondary-fixed": "#2a1700"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-xs": "0.375rem",
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "gutter-sm": "1rem",
+            "space-lg": "2rem",
+            "margin-md": "2rem",
+            "margin": "1.25rem",
+            "space-xl": "3rem",
+            "gutter-lg": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "price-card": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "price-hero": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "price-card": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "price-hero": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-surface-soft text-on-surface antialiased flex flex-col min-h-full font-body-md text-body-md selection:bg-primary-container selection:text-surface-clean">
+<!-- Top Announcement Fiscal & Logistic Bar -->
+<aside class="bg-primary text-surface-clean text-body-sm font-body-sm py-2 px-6 border-b border-primary-fixed-dim/20">
+<div class="max-w-[1360px] mx-auto flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 bg-emerald-surface text-tertiary-container text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-semibold border border-tertiary-fixed-dim/40">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+          SUNAT RUC 20 Activo y Habido
+        </span>
+<span class="hidden sm:inline text-surface-container-high/80">|</span>
+<span class="flex items-center gap-1.5 text-surface-container-low font-medium">
+<span class="material-symbols-outlined text-[16px] text-amber-bright" data-icon="local_shipping">local_shipping</span>
+          Despacho hoy en Magdalena, San Miguel, Jesús María y Miraflores
+        </span>
+</div>
+<div class="flex items-center gap-4 text-surface-container-low">
+<span class="text-label-sm font-label-sm text-secondary-fixed">¡Recibe tu Pedido Gratis desde S/ 700!</span>
+<a class="inline-flex items-center gap-1 hover:text-surface-clean transition-colors" href="https://wa.me/51931653685" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px] text-on-tertiary-container" data-icon="call">call</span>
+<span>Asesor Online: 931 653 685</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar (Shared Component JSON Blueprint) -->
+<header class="bg-surface-clean sticky top-0 z-40 shadow-sm border-b border-border-hairline">
+<div class="w-full max-w-[1360px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-4 py-3">
+<!-- Brand Logo Anchor -->
+<a class="flex items-center gap-3 flex-shrink-0 group" href="index.html">
+<img alt="Logo corporativo Plaza Multipack en Azul Cobalto y Amarillo Cálido" class="h-10 w-auto object-contain transition-transform duration-150 group-hover:scale-102" src="https://lh3.googleusercontent.com/aida/AEtjO1XWY4HdNtEp1E9VAJyMJrQDIqLFxcLQf-z8pEFW9BZk2Ux99OEmCQNxdoddSvycWSmfBZcosRi0RVwG9Gx7uALEegbHiaKCDNzgiGSDZrmV9Kid0jUDjX1cv-OyDk6Jw97JYVFbxFVMfphMkVj2pboaY7WXI21sMbNfy99wC80eONySP24I4JRbIgYHdOg_WWfIzgwJVhKCBg_Cf3QaygowC0HUrvhmldgQtV7FE765_JYFkZ_ntSHKgokF"/>
+</a>
+<!-- Search Bar on Left -->
+<div class="flex-1 max-w-xl hidden md:block">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-surface-subtle text-on-surface placeholder:text-outline text-body-md font-body-md pl-11 pr-24 py-2 rounded-lg border border-border-hairline focus:outline-none focus:border-royal-blue-vivid focus:ring-1 focus:ring-royal-blue-vivid transition-all duration-150" placeholder="Buscar en más de 2,500 productos de consumo y descartables..." type="text" value="Envases biodegradables pamolsa"/>
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-sm font-label-sm px-3 py-1.5 rounded-lg transition-colors duration-150" type="button">
+            Buscar
+          </button>
+</div>
+</div>
+<!-- Trailing Mode Switcher, Icons & Primary Action -->
+<div class="flex items-center gap-3">
+<!-- Modo Mayorista Badge/Action -->
+<div class="hidden lg:flex items-center gap-2 bg-emerald-surface border border-tertiary-fixed-dim/50 rounded-lg px-3 py-1.5 text-tertiary-container text-label-md font-label-md">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+<span>Modo Mayorista</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+</div>
+<!-- Trailing Icon Actions: location_on, receipt_long, person -->
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-2 rounded-lg hover:text-royal-blue-vivid hover:bg-surface-soft transition-colors duration-150" title="Zonas de cobertura" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="location_on">location_on</span>
+</button>
+<button class="p-2 rounded-lg hover:text-royal-blue-vivid hover:bg-surface-soft transition-colors duration-150" title="Facturación SUNAT (RUC 20)" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="receipt_long">receipt_long</span>
+</button>
+<button class="p-2 rounded-lg hover:text-royal-blue-vivid hover:bg-surface-soft transition-colors duration-150" title="Mi Cuenta Corporativa" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+</button>
+</div>
+<!-- Cart Action -->
+<button class="inline-flex items-center gap-2 bg-primary-container text-surface-clean px-4 py-2 rounded-lg hover:bg-royal-blue-vivid transition-all duration-150 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-label-md font-label-md font-semibold tracking-wide">Mi Carrito (S/ 0.00)</span>
+</button>
+</div>
+</div>
+<!-- Category Nav Bar Links -->
+<nav class="border-t border-border-hairline bg-surface-clean hidden md:block">
+<div class="max-w-[1360px] mx-auto px-6 lg:px-12 flex items-center gap-8 py-2.5 text-body-md">
+<a class="text-on-surface-variant hover:text-royal-blue-vivid font-medium transition-colors duration-150 pb-1" href="#">Abarrotes</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 flex items-center gap-1" href="#">
+<span>Descartables</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</a>
+<a class="text-on-surface-variant hover:text-royal-blue-vivid font-medium transition-colors duration-150 pb-1" href="#">Embalaje</a>
+<a class="text-on-surface-variant hover:text-royal-blue-vivid font-medium transition-colors duration-150 pb-1" href="#">Limpieza</a>
+<a class="text-on-surface-variant hover:text-royal-blue-vivid font-medium transition-colors duration-150 pb-1 flex items-center gap-1 text-secondary font-semibold" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="sell">sell</span>
+<span>Precios por Mayor</span>
+</a>
+</div>
+</nav>
+</header>
+<!-- Main Canvas: Breadcrumb & Catalog Section -->
+<main class="flex-1 max-w-[1360px] w-full mx-auto px-6 lg:px-12 py-6">
+<!-- Breadcrumbs -->
+<nav aria-label="Ruta de navegación" class="mb-4">
+<ol class="flex items-center gap-2 text-body-sm font-body-sm text-text-muted">
+<li>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="home">home</span>
+<span>Inicio</span>
+</a>
+</li>
+<li><span class="material-symbols-outlined text-[14px] text-outline-variant" data-icon="chevron_right">chevron_right</span></li>
+<li>
+<a class="hover:text-primary transition-colors" href="catalogo.html">Descartables</a>
+</li>
+<li><span class="material-symbols-outlined text-[14px] text-outline-variant" data-icon="chevron_right">chevron_right</span></li>
+<li aria-current="page" class="font-semibold text-primary">Envases y Descartables Biodegradables</li>
+</ol>
+</nav>
+<!-- Category Header Hero & Controls Bento Header -->
+<section class="bg-surface-clean rounded-xl border border-border-hairline p-6 lg:p-8 mb-8 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-border-hairline">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex items-center gap-2.5 flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Envases y Descartables Biodegradables</h1>
+<span class="bg-emerald-surface text-tertiary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-tertiary-fixed-dim/60 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="eco">eco</span>
+              Línea Ecológica Certificada
+            </span>
+</div>
+<p class="font-body-md text-body-md text-text-muted">
+            Soluciones compostables de bagazo de caña, polipapel y bio-resinas certificadas para restaurantes, Dark Kitchens y catering en Lima. Distribuidor mayorista autorizado de Pamolsa, Reyma y Dasil.
+          </p>
+</div>
+<!-- Quick B2B Trust Stamp -->
+<div class="flex items-center gap-3 bg-surface-soft border border-border-hairline rounded-lg p-3 self-start lg:self-auto flex-shrink-0">
+<div class="w-10 h-10 rounded-lg bg-emerald-surface flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[24px]" data-icon="verified_user">verified_user</span>
+</div>
+<div class="text-left">
+<span class="block text-label-md font-label-md font-bold text-on-surface">Emisión Inmediata RUC 20</span>
+<span class="block text-body-sm font-body-sm text-text-muted">Factura electrónica con crédito fiscal IGV 18%</span>
+</div>
+</div>
+</div>
+<!-- Controls Row: Count, Sorting, View Toggle -->
+<div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-body-md font-body-md text-text-muted w-full sm:w-auto">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="inventory">inventory</span>
+<span>Mostrando <strong class="text-on-surface font-semibold">48 productos</strong> disponibles para despacho inmediato en Lima Metropolitana</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<!-- Sort Dropdown -->
+<div class="flex items-center gap-2">
+<label class="text-label-md font-label-md text-text-muted whitespace-nowrap" for="sort-select">Ordenar por:</label>
+<div class="relative">
+<select class="appearance-none bg-surface-soft border border-border-hairline hover:border-border-hover rounded-lg px-3.5 py-2 pr-9 text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-royal-blue-vivid cursor-pointer" id="sort-select">
+<option selected="">Mayor ahorro por volumen</option>
+<option>Precio menor a mayor</option>
+<option>Precio mayor a menor</option>
+<option>Más vendidos B2B</option>
+<option>Nuevos ingresos biodegradables</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center border border-border-hairline rounded-lg p-0.5 bg-surface-soft">
+<button aria-label="Vista cuadrícula" class="p-1.5 rounded bg-surface-clean text-primary shadow-xs" title="Cuadrícula espaciosa" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="grid_view">grid_view</span>
+</button>
+<button aria-label="Vista lista" class="p-1.5 rounded text-outline hover:text-on-surface transition-colors" title="Lista detallada B2B" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="view_list">view_list</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2 Columns Catalog Structure (Sidebar 260px + Main Grid 3 columns) -->
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<!-- LEFT SIDEBAR FILTERS (260px) -->
+<aside class="w-full lg:w-[260px] flex-shrink-0 bg-surface-clean border border-border-hairline rounded-xl p-5 space-y-6 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-border-hairline">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px]" data-icon="tune">tune</span>
+            Filtros
+          </span>
+<button class="text-label-sm font-label-sm text-royal-blue-vivid hover:underline" type="button">
+            Limpiar todo
+          </button>
+</div>
+<!-- Filter 1: Modalidad de compra -->
+<div class="space-y-3">
+<h2 class="text-label-lg font-label-lg font-bold text-on-surface">Modalidad de compra</h2>
+<div class="space-y-2 text-body-md font-body-md text-text-muted">
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Por Caja / Fardo</span>
+<span class="text-label-sm font-label-sm text-outline">32</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Por Paquete individual</span>
+<span class="text-label-sm font-label-sm text-outline">16</span>
+</label>
+</div>
+</div>
+<hr class="border-border-hairline"/>
+<!-- Filter 2: Material -->
+<div class="space-y-3">
+<h2 class="text-label-lg font-label-lg font-bold text-on-surface">Material Ecológico</h2>
+<div class="space-y-2 text-body-md font-body-md text-text-muted">
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Bagazo de Caña (Eco)</span>
+<span class="text-label-sm font-label-sm text-outline">24</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Polipapel Reciclable</span>
+<span class="text-label-sm font-label-sm text-outline">14</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Plástico PET Reciclable</span>
+<span class="text-label-sm font-label-sm text-outline">10</span>
+</label>
+</div>
+</div>
+<hr class="border-border-hairline"/>
+<!-- Filter 3: Marcas -->
+<div class="space-y-3">
+<h2 class="text-label-lg font-label-lg font-bold text-on-surface">Marcas Líderes</h2>
+<div class="space-y-2 text-body-md font-body-md text-text-muted">
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Pamolsa Bio</span>
+<span class="text-label-sm font-label-sm text-outline">22</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Reyma Ecológico</span>
+<span class="text-label-sm font-label-sm text-outline">12</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Dasil Eco Pack</span>
+<span class="text-label-sm font-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none group">
+<input class="w-4 h-4 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors flex-1">Multipack Pro</span>
+<span class="text-label-sm font-label-sm text-outline">6</span>
+</label>
+</div>
+</div>
+<hr class="border-border-hairline"/>
+<!-- Filter 4: Rango de Precios (Slider interactivo S/ 5 - S/ 150) -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="text-label-lg font-label-lg font-bold text-on-surface">Rango de Precios</h2>
+<span class="text-label-sm font-label-sm font-semibold text-primary">S/ 5 - S/ 150</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-subtle rounded-lg cursor-pointer" max="150" min="5" type="range" value="85"/>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span class="bg-surface-subtle px-2 py-1 rounded border border-border-hairline">Min: S/ 5.00</span>
+<span class="bg-surface-subtle px-2 py-1 rounded border border-border-hairline">Max: S/ 150.00</span>
+</div>
+</div>
+<hr class="border-border-hairline"/>
+<!-- Filter 5: Despacho Express -->
+<div class="space-y-3">
+<h2 class="text-label-lg font-label-lg font-bold text-on-surface">Disponibilidad de Entrega</h2>
+<label class="flex items-start gap-2.5 cursor-pointer select-none bg-surface-soft p-2.5 rounded-lg border border-border-hairline group">
+<input checked="" class="w-4 h-4 mt-0.5 rounded text-primary focus:ring-royal-blue-vivid border-border-hairline" type="checkbox"/>
+<div class="space-y-0.5">
+<span class="font-label-md font-label-md text-on-surface group-hover:text-primary transition-colors block">Entrega hoy</span>
+<span class="font-body-sm text-body-sm text-text-muted block">Magdalena, San Miguel y distritos aledaños</span>
+</div>
+</label>
+</div>
+<!-- Fiscal Note Box -->
+<div class="bg-emerald-surface/60 border border-tertiary-fixed-dim/40 rounded-lg p-3 text-body-sm font-body-sm text-tertiary-container space-y-1">
+<div class="flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]" data-icon="policy">policy</span>
+<span>Garantía Fiscal SUNAT</span>
+</div>
+<p class="text-body-sm text-tertiary-container/90">
+            Valida tu RUC en el carrito para emitir Factura Electrónica automática con desglose de IGV.
+          </p>
+</div>
+</aside>
+<!-- MAIN PRODUCT AREA: 3 COLUMNS GRID -->
+<section class="flex-1 w-full space-y-8">
+<!-- Active Filter Chips -->
+<div class="flex items-center gap-2 flex-wrap text-label-sm font-label-sm">
+<span class="text-text-muted">Filtros aplicados:</span>
+<span class="inline-flex items-center gap-1 bg-surface-clean border border-border-hairline px-2.5 py-1 rounded-full text-on-surface">
+            Por Caja / Fardo
+            <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error" data-icon="close">close</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-clean border border-border-hairline px-2.5 py-1 rounded-full text-on-surface">
+            Bagazo de Caña
+            <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error" data-icon="close">close</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-clean border border-border-hairline px-2.5 py-1 rounded-full text-on-surface">
+            Pamolsa
+            <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error" data-icon="close">close</span>
+</span>
+<button class="text-royal-blue-vivid hover:underline ml-1" type="button">Restablecer filtros</button>
+</div>
+<!-- Product Grid (3 Columns) with spacious cards & airy design tokens -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- PRODUCT CARD 1 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed-dim/50 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="eco">eco</span>
+                  Eco-Friendly
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-PAM-88</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A clean, studio-lit commercial render of Pamolsa eco-friendly biodegradable deli food container 8x8 inches with fitted lid, made from natural sugarcane bagasse fiber. Displayed centrally on an airy, pure white and soft gray surface with subtle reflections, matching a modern light-mode Peruvian retail catalog with cobalt blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuiz50VKNjwEfytAzKoCQVtKkDuvQKD98xCUAsYsTmiElR6eNQX_XwZuUlhPpOk1AoN5qY0u7IvDltXM8VAi7xjW4n0FQJCgx32AfMovuHUWdMmejFepOmQmNbr-r_VF5sPNhfx9a2sDu8C-ftaz1eopZ73G4lowai7zYIlJgGSvNmmUq-jQSDHwcnAFyjb0MappkOhiUD5lVOsNvg-E9eHPo9--F4L3_dnAiF1EcOa2XmTbghIg3-3Q"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  Bagazo 100% Compostable
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Pamolsa Bio Line</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Envase Biodegradable Pamolsa Deli 8x8 con Tapa x 25un</a>
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Paquete x 25 unidades | Resistente a microondas y grasas
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 10.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 12.60</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule (Emerald Highlighting) -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (4+ pqtes):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 8.50 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorras S/ 6.00 por fardo cerrado
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+<!-- PRODUCT CARD 2 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-secondary-fixed text-secondary-container border border-amber-bright/40 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="percent">percent</span>
+                  -15% Oferta
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-REY-99</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A premium commercial product photograph of Reyma biodegradable 3-compartment lunch box container made of molded wheat straw and natural fibers. Shot in an immaculate, bright white studio setting with gentle diffuse shadows, illustrating high quality food service packaging for Peruvian culinary businesses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7l23ueJUgNmfr0lfKduRE3U-4goYuTzRxX8Z4nkyXX8Df9Ayk2-LFce0zk-ylVdsENrxuAMXw_-ujaJtMOgBi3U-Y4ICFKVNv7YfLafbqkJ3A1mFea5m6ONQ4KEwlMiHmCm1M_qKvz9kD7cLThHlFyqm5feAf-r_V90ZIL99FgUHfXXYz-VUMtG0oa0aTimx5J3MVwaK77m28HPkSbUlmigLeV63SxdycbFASa4a3Tau2hdb0s7YZdw"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  3 Divisiones Menú
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Reyma EcoPack</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Envase Menú 3 Divisiones Biodegradable 9x9 Paquete x 25un</a>
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Paquete x 25 unidades | Cierre hermético tipo bisagra
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 12.50</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 14.80</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (6+ pqtes):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 10.20 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorro de S/ 13.80 por fardo de 150 unidades
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+<!-- PRODUCT CARD 3 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed-dim/50 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="eco">eco</span>
+                  Eco-Friendly
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-DAS-BW</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A clean product shot of Dasil biodegradable kraft round salad bowl with clear recycled PET lid, displayed symmetrically on a pristine light background with soft natural lighting, showcasing modern eco-conscious food take-out packaging with crisp edges and fine organic texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg5fToydeaNVNdSsd255seublfEoyIm93EOupaRARhmaQ6Czl2LntGH_KaTBcqjvT5_Uq7KhxAnbkrgHc5ktvhIkmt93LE-dc93u-jEa7E29w3l2LDPO3yrlmxVuPMQ3y2SF-LNtYsoA0490GJEsjCE4KmocSZMUwAPCYtKDm_zi8u9KmtKMNNpWS2a0G0Yw1V0_K5Jz0npUkL0A6Ipl-7s0NtnCIeeLM3q0dQFS3KCG5rdaJ6Mnh85A"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  Bowl Ensaladero 32 oz
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Dasil Packaging</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Bowl Polipapel Kraft Ecológico 1000ml / 32oz con Tapa x 25un</a>
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Paquete x 25 unidades | Apto para alimentos fríos y calientes
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 14.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 16.50</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (4+ pqtes):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 11.80 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorras S/ 8.80 por caja máster
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+<!-- PRODUCT CARD 4 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed-dim/50 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="eco">eco</span>
+                  Eco-Friendly
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-PAM-HAM</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A minimalist, high definition studio render of a Pamolsa biodegradable hamburger clamshell box made from sugarcane bagasse fiber. Positioned on a bright, off-white clean surface with subtle daylight shadows, perfect for a fast-casual modern gastro packaging catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7d3OY0_wDmydH6F_HEyw-dnVn6t6bltE9fS2KfyTkEpzMlOy-eKlrPuBluZ9SyZr2C6FqNpv2PAdVI2SUXCf8q8hg14X5J30B99NOOkOykCtYZsXs6PlS86j4yDEbf7v8nvKm7KvpF-378JEpXHHucMwyxRKgQHmdSVQUHYecGX92Xh5YzPXzQdBL0rCMKw-ySD1HItXtmFNp5lFwlnV_f8GQgK0krlyANq-orZ7Hgf5REaro6qwrCw"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  Hamburguesero 6x6
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Pamolsa Bio Line</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Envase Hamburguesero Biodegradable Pamolsa 6x6 x 50un</a>
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Paquete x 50 unidades | Térmico y biodegradable
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 15.50</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 18.20</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (5+ pqtes):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 13.00 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorras S/ 12.50 comprando por fardo
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+<!-- PRODUCT CARD 5 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-secondary-fixed text-secondary-container border border-amber-bright/40 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="local_fire_department">local_fire_department</span>
+                  Más Vendido
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-DAS-CUB</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A clean, minimalist commercial arrangement of biodegradable wooden and bio-plastic forks, spoons, and knives packaged neatly in individual kraft paper sleeves. Set against a pure white studio backdrop with subtle warm lighting, communicating hygiene and sustainability for restaurants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6zNyY3daazXWgSHqkOM-SeTL_TEMJ2_JGozVlHR0VUcXzs9us-KYpYaMa1JcRCpmDgb5WVYOJ0pEQSFyK8RsN1MhmQvegiYMOvYZ_QGnYpv2-TJTLvQV2TB0esKY0XRRAe5UA9hN2gRlA7G9ulk-098Wr7Di8FPRCU4CBYb6q7e68wvvn3QwPBK3ch7DKq8IeoEaycOcKfgqJtB02GTAGgWgCS7AuJ3iY2ggz6-1CeCsbfA36SLMvA"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  Set Cubiertos Compostables
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Dasil Eco Green</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Set de Cubiertos Biodegradables CPLA</a> (Tenedor + Cuchara + Servilleta) x 50 sets
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Pack x 50 juegos enfundados individualmente
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 16.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 19.00</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (8+ packs):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 13.50 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorro comercial de S/ 20.00 por fardo
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+<!-- PRODUCT CARD 6 -->
+<article class="bg-surface-clean border border-border-hairline hover:border-border-hover rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md relative group">
+<div class="space-y-4">
+<!-- Top Badges & SKU -->
+<div class="flex items-center justify-between gap-2">
+<span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed-dim/50 text-label-sm font-label-sm px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="eco">eco</span>
+                  Eco-Friendly
+                </span>
+<span class="text-body-sm font-body-sm text-outline">SKU: BIO-REY-VAS</span>
+</div>
+<!-- Product Image Container -->
+<div class="bg-surface-soft rounded-xl p-4 flex items-center justify-center aspect-[4/3] overflow-hidden relative">
+<img class="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105" data-alt="A pristine studio render of tall polipapel double wall biodegradable hot beverage paper cups in warm earthen tones with matching bio-fiber lids. Symmetrically framed on a bright, uncluttered surface with crisp lighting, designed for contemporary specialty coffee shops." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxh96ksjVoa-d6ZoZGhrcaFkODQ59q4ozL7vS8UOVHcnzOCYpGegxCmf3FeSWnjdEu8G3XD58GWY8WRvB6uHOcBgLYw9xuYRyD8B3SP7aRY4Jw21wS5_Z60FNRW9FbouSQk4lA6kGoRUXcZ5SIeAID9Ox5M1aksTmucCnHgif4KuW3bBNBUCzVEIUZEBxaCg9QtLtE48LFOO2-tcRqA8E0nBZuCKYODExeGbg4KbvvmQmAR6g_dWfdA"/>
+<span class="absolute bottom-2 left-2 bg-surface-clean/90 backdrop-blur-xs text-text-muted text-label-sm font-label-sm px-2 py-0.5 rounded border border-border-hairline">
+                  Vaso Polipapel 12 oz
+                </span>
+</div>
+<!-- Content details -->
+<div class="space-y-1.5">
+<span class="text-label-md font-label-md text-primary font-bold">Reyma Café</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2">
+                  <a href="producto.html" class="hover:underline">Vaso Polipapel Ecológico Reyma 12 oz</a> con Tapa Bio x 50un
+                </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+                  Presentación: Paquete x 50 unidades | Para café y bebidas calientes
+                </p>
+</div>
+<!-- Pricing Section -->
+<div class="pt-2 border-t border-border-hairline space-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-price-card text-price-card text-on-surface">S/ 18.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 21.50</span>
+<span class="text-label-sm font-label-sm text-text-muted">/ paquete</span>
+</div>
+<!-- Wholesale Tier Capsule -->
+<div class="bg-emerald-surface border border-tertiary-fixed-dim/60 rounded-lg p-2.5 text-body-sm font-body-sm text-tertiary-container space-y-0.5">
+<div class="flex items-center justify-between font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" data-icon="inventory_2">inventory_2</span>
+                      Por Mayor (4+ pqtes):
+                    </span>
+<span class="text-tertiary-container font-price-card text-[15px]">S/ 15.20 c/u</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-tertiary-fixed-variant block">
+                    Ahorro acumulado de S/ 11.20 en fardo de 200 vasos
+                  </span>
+</div>
+</div>
+</div>
+<!-- Stepper and Add Button -->
+<div class="pt-4 mt-2 flex items-center gap-2">
+<div class="flex items-center bg-surface-subtle border border-border-hairline rounded-lg overflow-hidden flex-shrink-0">
+<button aria-label="Disminuir" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">-</button>
+<input class="w-9 h-8 border-none bg-transparent text-center text-body-md font-semibold text-on-surface p-0 focus:ring-0" type="text" value="1"/>
+<button aria-label="Aumentar" class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-border-hairline transition-colors" type="button">+</button>
+</div>
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-royal-blue-vivid text-surface-clean text-label-md font-label-md font-semibold py-2 px-3 rounded-lg transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Añadir al pedido</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Pagination Section -->
+<div class="bg-surface-clean border border-border-hairline rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<span class="text-body-sm font-body-sm text-text-muted">
+            Mostrando <strong class="text-on-surface">1 - 6</strong> de 48 productos biodegradables
+          </span>
+<nav aria-label="Paginación" class="flex items-center gap-1">
+<button aria-label="Página anterior" class="p-2 rounded-lg text-outline border border-border-hairline cursor-not-allowed opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-surface-clean font-semibold text-label-md font-label-md flex items-center justify-center" type="button">1</button>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-soft border border-transparent hover:border-border-hairline font-semibold text-label-md font-label-md flex items-center justify-center transition-colors" type="button">2</button>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-soft border border-transparent hover:border-border-hairline font-semibold text-label-md font-label-md flex items-center justify-center transition-colors" type="button">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-soft border border-transparent hover:border-border-hairline font-semibold text-label-md font-label-md flex items-center justify-center transition-colors" type="button">8</button>
+<button aria-label="Página siguiente" class="p-2 rounded-lg text-on-surface hover:bg-surface-soft border border-border-hairline transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</nav>
+</div>
+<!-- Banner Asesoría Personalizada B2B (+20 fardos) -->
+<section class="bg-primary text-surface-clean rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-sm">
+<div class="relative z-10 space-y-2 max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]" data-icon="pallet">pallet</span>
+              Atención Corporativa & Distribuidores
+            </div>
+<h2 class="text-headline-md font-headline-md font-extrabold text-surface-clean tracking-tight">
+              ¿Compras más de 20 fardos o pallets completos de descartables?
+            </h2>
+<p class="text-body-md font-body-md text-surface-container-high/90">
+              Obtén cotización formal con crédito fiscal SUNAT, lista de precios para distribuidor y despacho prioritario directo a almacén o cadena de restaurantes en Lima.
+            </p>
+</div>
+<div class="relative z-10 flex-shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-surface-clean font-bold text-label-lg font-label-lg px-6 py-3.5 rounded-xl transition-colors duration-150 shadow-md" href="https://wa.me/51931653685?text=Hola,%20deseo%20cotizar%20por%20mayor%20más%20de%2020%20fardos%20de%20descartables" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]" data-icon="chat">chat</span>
+<span>Cotizar por WhatsApp Corporativo</span>
+</a>
+</div>
+<!-- Ambient geometric background accent -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-royal-blue-vivid/20 rounded-full blur-2xl pointer-events-none"></div>
+</section>
+</section>
+</div>
+</main>
+<!-- Institutional Footer (Shared Component JSON Blueprint) -->
+<footer class="bg-surface-soft border-t border-border-hairline mt-12">
+<div class="w-full max-w-[1360px] mx-auto px-6 lg:px-12 py-12 space-y-8">
+<!-- Top Grid: Brand, Contact, Services, Legal -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<!-- Brand Info -->
+<div class="lg:col-span-2 space-y-4">
+<div class="text-headline-sm font-headline-sm font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[26px] text-primary" data-icon="storefront">storefront</span>
+<span>Plaza Multipack S.A.C.</span>
+</div>
+<p class="text-body-sm font-body-sm text-text-muted leading-relaxed max-w-sm">
+            Tu aliado estratégico en el abastecimiento mayorista de abarrotes, productos de limpieza y artículos descartables biodegradables para hogares y empresas en Lima Metropolitana.
+          </p>
+<div class="text-body-sm font-body-sm text-text-muted space-y-1">
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="location_pin">location_pin</span>
+<span>Jirón José Gálvez 614, Magdalena del Mar, Lima</span>
+</p>
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="phone_enabled">phone_enabled</span>
+<span>Central Telefónica: (01) 931 653 685</span>
+</p>
+<p class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="mail">mail</span>
+<span>plazamultipack.online@gmail.com</span>
+</p>
+</div>
+</div>
+<!-- Links Column 1: SUNAT & Facturación -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Gestión Tributaria</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Facturación Electrónica SUNAT (RUC 20)</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://empaques.iconofact.com/buscar" rel="noopener noreferrer" target="_blank">Boletas y Facturas en Línea</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Términos y Condiciones Mayoristas</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Consultar RUC Habido y Activo</a>
+</li>
+</ul>
+</div>
+<!-- Links Column 2: Despacho & Cobertura -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Logística Lima</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Zonas de Despacho Lima</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Seguimiento de Fardos en Ruta</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Tarifas y Envíos Gratis desde S/ 700</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Horarios de Recojo en Tienda</a>
+</li>
+</ul>
+</div>
+<!-- Links Column 3: Atención y Reclamaciones -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Canales de Ayuda</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150 flex items-center gap-1" href="https://wa.me/51931653685">
+<span>Atención por WhatsApp Corporativo</span>
+</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Cambios y Devoluciones</a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-150 flex items-center gap-1 font-semibold text-secondary" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu_book">menu_book</span>
+<span>Libro de Reclamaciones Virtual</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Fiscal Stamp & Copyright Section -->
+<div class="pt-8 border-t border-border-hairline flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-text-muted">
+<p>
+          © 2024 Plaza Multipack S.A.C. RUC 20601234567. Todos los derechos reservados. Facturación Electrónica SUNAT activa y habida.
+        </p>
+<!-- Payment Badges / Safe Checkout -->
+<div class="flex items-center gap-3 text-label-sm font-label-sm">
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Yape</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Plin</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Transferencia BCP / BBVA</span>
+<span class="bg-surface-clean border border-border-hairline px-2.5 py-1 rounded text-on-surface font-semibold">Visa / Mastercard</span>
+</div>
+</div>
+</div>
+</footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/catalogo.js"></script>
+</body></html>
+
