@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html class="h-full bg-slate-50 text-slate-800" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Executive Sales & Analytics Suite | Plaza Multipack S.A.C.</title>
+  <meta name="description" content="Dashboard estratégico de inteligencia comercial multitienda y ventas B2B para Plaza Multipack S.A.C. Demostración de implementación y resultados para alta dirección." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "cobalt-dark": "#F8FAFC",
+            "cobalt-card": "#FFFFFF",
+            "cobalt-border": "#DBEAFE",
+            "royal-accent": "#2563EB",
+            "gold-accent": "#F59E0B",
+            "emerald-glow": "#10B981",
+            "rose-glow": "#F43F5E",
+            "surface-subtle": "#F1F5F9"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Chart.js CDN for interactive charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <style>
+    /* Estilos personalizados para la suite ejecutiva */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    .live-dot {
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+    /* White & Translucent Blue Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(219, 234, 254, 0.8);
+      box-shadow: 0 10px 30px -8px rgba(30, 64, 175, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(147, 197, 253, 0.95);
+      box-shadow: 0 14px 34px -8px rgba(30, 64, 175, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+    }
+    /* Estilos de impresión para informe ejecutivo */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        break-inside: avoid;
+      }
+      .text-slate-100, .text-slate-800, .text-slate-700, .text-white {
+        color: #0f172a !important;
+      }
+      .text-slate-500 {
+        color: #475569 !important;
+      }
+      .bg-white, .bg-white, .bg-cobalt-dark, .bg-cobalt-card {
+        background: #ffffff !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-full flex flex-col bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 text-slate-800 antialiased font-sans selection:bg-blue-100 selection:text-blue-900 relative overflow-x-hidden">
+  <!-- Subtle Translucent Ambient Glows -->
+  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-blue-200/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-10 w-[600px] h-[600px] bg-sky-200/25 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- TOP HEADER & EXECUTIVE BRANDING -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-xs">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Logo & System Title -->
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none" title="Volver al Portal Web">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-500 p-0.5 shadow-md flex items-center justify-center">
+            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center text-blue-600 group-hover:text-blue-800 transition-colors shadow-xs">
+              <span class="material-symbols-outlined text-[24px]">insights</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-slate-900 text-lg tracking-tight">PLAZA MULTIPACK</span>
+              <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100/80 text-blue-800 border border-blue-200/80">SUITE EJECUTIVA</span>
+            </div>
+            <p class="text-xs text-slate-500 flex items-center gap-1.5">
+              <span>RUC 20601234567</span>
+              <span>•</span>
+              <span class="text-emerald-600 flex items-center gap-1 font-medium">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 live-dot"></span> 4 Puntos de Venta Sincronizados
+              </span>
+            </p>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Back to Store -->
+        <a href="index.html" class="hidden md:flex items-center gap-1.5 text-xs text-slate-600 hover:text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-50/70 transition-colors border border-transparent hover:border-blue-100">
+          <span class="material-symbols-outlined text-[16px]">storefront</span>
+          <span>Ir a Tienda</span>
+        </a>
+        <a href="catalogo.html" class="hidden md:flex items-center gap-1.5 text-xs text-slate-600 hover:text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-50/70 transition-colors border border-transparent hover:border-blue-100">
+          <span class="material-symbols-outlined text-[16px]">inventory_2</span>
+          <span>Catálogo</span>
+        </a>
+      </div>
+
+      <!-- Controls & Presentation Actions -->
+      <div class="flex items-center flex-wrap gap-2.5">
+        
+        <!-- Store Filter Selector -->
+        <div class="relative inline-flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-slate-500 text-[18px] pointer-events-none">store</span>
+          <select id="branchFilter" class="pl-9 pr-8 py-2 bg-white text-xs font-semibold text-slate-700 border border-slate-200 hover:border-blue-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg shadow-xs outline-none cursor-pointer transition-all">
+            <option value="all">Todas las Tiendas (Consolidado)</option>
+            <option value="ecommerce">Canal E-commerce B2B (web-market)</option>
+            <option value="san_miguel">Sucursal San Miguel (Hub Mayorista)</option>
+            <option value="magdalena">Tienda Central Magdalena (Matriz)</option>
+            <option value="san_isidro">Hub San Isidro / Miraflores (HORECA)</option>
+          </select>
+        </div>
+
+        <!-- Period Filter Selector -->
+        <div class="relative inline-flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-slate-500 text-[18px] pointer-events-none">calendar_month</span>
+          <select id="periodFilter" class="pl-9 pr-8 py-2 bg-white text-xs font-semibold text-slate-700 border border-slate-200 hover:border-blue-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg shadow-xs outline-none cursor-pointer transition-all">
+            <option value="month">Este Mes (Octubre 2026)</option>
+            <option value="week">Últimos 7 Días</option>
+            <option value="quarter">Tercer Trimestre (Q3)</option>
+            <option value="year">Año 2026 a la Fecha (YTD)</option>
+          </select>
+        </div>
+
+        <!-- Presentation Pitch Button -->
+        <button id="openPresentationBtn" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-amber-950 font-display font-bold text-xs shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <span class="material-symbols-outlined text-[18px]">co_present</span>
+          <span>Modo Pitch Ejecutivo</span>
+        </button>
+
+        <!-- ROI Calculator Trigger -->
+        <a href="#section-roi" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 text-xs font-semibold border border-slate-200 hover:border-blue-200 shadow-xs transition-all">
+          <span class="material-symbols-outlined text-emerald-400 text-[18px]">calculate</span>
+          <span class="hidden sm:inline">Calculadora ROI</span>
+        </a>
+
+        <!-- Export / Print Button -->
+        <button onclick="window.print()" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 text-xs font-semibold border border-slate-200 hover:border-blue-200 shadow-xs transition-all" title="Imprimir informe en PDF">
+          <span class="material-symbols-outlined text-[18px]">print</span>
+          <span class="hidden lg:inline">Exportar PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PITCH INTRO BANNER FOR THE EXECUTIVE -->
+  <section class="bg-gradient-to-r from-blue-50/90 via-white to-indigo-50/70 border-b border-blue-100 px-6 sm:px-8 py-6 sm:py-7">
+    <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100/80 border border-blue-200/80 text-blue-900 text-xs font-semibold mb-2.5 shadow-xs">
+          <span class="material-symbols-outlined text-[15px]">verified</span>
+          <span>Demostración Estratégica para Gerencia General y Directorio</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 tracking-tight">
+          Tablero de Control Multitienda y Cuentas Clave B2B
+        </h1>
+        <p class="text-slate-600 text-sm max-w-3xl mt-1.5 leading-relaxed">
+          Visualice en tiempo real qué empresa compra más, qué producto genera mayor margen, el rendimiento por tienda física vs. e-commerce y cómo la analítica predictiva incrementa la facturación en <span class="text-emerald-400 font-bold">+22%</span>.
+        </p>
+      </div>
+
+      <!-- Quick Quick-Jump Tabs -->
+      <div class="flex items-center flex-wrap gap-2 text-xs font-medium">
+        <a href="#section-kpis" class="px-3.5 py-1.5 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-blue-700 border border-blue-100/90 shadow-xs font-medium transition-all">
+          KPIs Clave
+        </a>
+        <a href="#section-tiendas" class="px-3.5 py-1.5 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-blue-700 border border-blue-100/90 shadow-xs font-medium transition-all">
+          Ventas por Tienda
+        </a>
+        <a href="#section-empresas" class="px-3.5 py-1.5 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-blue-700 border border-blue-100/90 shadow-xs font-medium transition-all">
+          Top Empresas B2B
+        </a>
+        <a href="#section-productos" class="px-3.5 py-1.5 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-blue-700 border border-blue-100/90 shadow-xs font-medium transition-all">
+          Productos Estrella
+        </a>
+        <a href="#section-zonas" class="px-3.5 py-1.5 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-blue-700 border border-blue-100/90 shadow-xs font-medium transition-all">
+          Zonas de Lima
+        </a>
+        <a href="#section-implementacion" class="px-3.5 py-1.5 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-900 border border-blue-300 font-bold shadow-xs transition-all">
+          ¿Cómo se Implementa?
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN DASHBOARD CONTENT -->
+  <main class="flex-1 max-w-[1600px] w-full mx-auto px-6 sm:px-8 lg:px-12 py-8 space-y-10">
+
+    <!-- 1. EXECUTIVE KPI BENTO GRID -->
+    <section id="section-kpis" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      
+      <!-- KPI 1: Facturación Total -->
+      <div class="glass-card p-6 lg:p-7 rounded-2xl relative overflow-hidden transition-all duration-200 hover:-translate-y-1">
+        <div class="flex items-center justify-between text-slate-500 mb-2.5">
+          <span class="text-xs font-semibold tracking-wider uppercase">Facturación Total Neta</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">payments</span>
+          </div>
+        </div>
+        <div class="text-2xl lg:text-3xl font-display font-extrabold text-slate-900 tracking-tight" id="kpiRevenue">
+          S/ 1,485,250
+        </div>
+        <div class="mt-2 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md">
+            <span class="material-symbols-outlined text-[14px]">trending_up</span> +18.4%
+          </span>
+          <span class="text-slate-500">vs mes anterior</span>
+        </div>
+        <div class="mt-4 text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span>Meta Mensual: S/ 1.40M</span>
+          <span class="text-emerald-700 font-bold">106.1% cumplida</span>
+        </div>
+        <!-- Decorative Glow -->
+        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none"></div>
+      </div>
+
+      <!-- KPI 2: Ticket Promedio B2B -->
+      <div class="glass-card p-6 lg:p-7 rounded-2xl relative overflow-hidden transition-all duration-200 hover:-translate-y-1">
+        <div class="flex items-center justify-between text-slate-500 mb-2.5">
+          <span class="text-xs font-semibold tracking-wider uppercase">Ticket Promedio B2B</span>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          </div>
+        </div>
+        <div class="text-2xl lg:text-3xl font-display font-extrabold text-slate-900 tracking-tight" id="kpiAvgTicket">
+          S/ 3,840.50
+        </div>
+        <div class="mt-2 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md">
+            <span class="material-symbols-outlined text-[14px]">trending_up</span> +12.6%
+          </span>
+          <span class="text-slate-500">por escala Cajas Master</span>
+        </div>
+        <div class="mt-4 text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span>Hogar: S/ 145.00</span>
+          <span class="text-amber-800 font-bold">Mayorista: S/ 3.8K</span>
+        </div>
+        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
+      </div>
+
+      <!-- KPI 3: Cuentas Corporativas Activas -->
+      <div class="glass-card p-6 lg:p-7 rounded-2xl relative overflow-hidden transition-all duration-200 hover:-translate-y-1">
+        <div class="flex items-center justify-between text-slate-500 mb-2.5">
+          <span class="text-xs font-semibold tracking-wider uppercase">Empresas Activas B2B</span>
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">domain</span>
+          </div>
+        </div>
+        <div class="text-2xl lg:text-3xl font-display font-extrabold text-slate-900 tracking-tight" id="kpiActiveClients">
+          418 Cuentas
+        </div>
+        <div class="mt-2 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md">
+            <span class="material-symbols-outlined text-[14px]">add</span> +34 nuevas
+          </span>
+          <span class="text-slate-500">este mes</span>
+        </div>
+        <div class="mt-4 text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span>Tasa de Recompra:</span>
+          <span class="text-emerald-700 font-bold">88.5% recurrente</span>
+        </div>
+        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
+      </div>
+
+      <!-- KPI 4: Margen Bruto Ponderado -->
+      <div class="glass-card p-6 lg:p-7 rounded-2xl relative overflow-hidden transition-all duration-200 hover:-translate-y-1">
+        <div class="flex items-center justify-between text-slate-500 mb-2.5">
+          <span class="text-xs font-semibold tracking-wider uppercase">Margen Bruto Ponderado</span>
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">percent</span>
+          </div>
+        </div>
+        <div class="text-2xl lg:text-3xl font-display font-extrabold text-slate-900 tracking-tight" id="kpiMargin">
+          28.6%
+        </div>
+        <div class="mt-2 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md">
+            <span class="material-symbols-outlined text-[14px]">arrow_upward</span> +3.2 pp
+          </span>
+          <span class="text-slate-500">vs trimestre anterior</span>
+        </div>
+        <div class="mt-4 text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span>Línea Biodegradable:</span>
+          <span class="text-blue-800 font-bold">34.8% de margen</span>
+        </div>
+        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl pointer-events-none"></div>
+      </div>
+
+      <!-- KPI 5: Cumplimiento Logístico SLA 24h -->
+      <div class="glass-card p-6 lg:p-7 rounded-2xl relative overflow-hidden transition-all duration-200 hover:-translate-y-1">
+        <div class="flex items-center justify-between text-slate-500 mb-2.5">
+          <span class="text-xs font-semibold tracking-wider uppercase">Efectividad SLA 24h</span>
+          <div class="w-8 h-8 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">local_shipping</span>
+          </div>
+        </div>
+        <div class="text-2xl lg:text-3xl font-display font-extrabold text-slate-900 tracking-tight" id="kpiSLA">
+          98.4%
+        </div>
+        <div class="mt-2 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-md">
+            <span class="material-symbols-outlined text-[14px]">check_circle</span> En Objetivo
+          </span>
+          <span class="text-slate-500">Lima Metropolitana</span>
+        </div>
+        <div class="mt-4 text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span>Costo de flete medio:</span>
+          <span class="text-slate-800 font-bold">3.1% s/ venta</span>
+        </div>
+        <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-teal-500/10 rounded-full blur-xl pointer-events-none"></div>
+      </div>
+
+    </section>
+
+    <!-- 2. VENTAS POR TIENDA Y MULTICANALIDAD -->
+    <section id="section-tiendas" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="text-xl font-display font-bold text-slate-900 tracking-tight">1. Rendimiento y Ventas por Sucursal / Canal</h2>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-semibold border border-blue-200">Omnicanal</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">Comparativa de facturación real vs cuota, ticket promedio y rentabilidad por punto de venta.</p>
+        </div>
+        <div class="text-xs text-slate-600 flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-lg border border-slate-200 shadow-xs">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Facturado
+          <span class="w-2.5 h-2.5 rounded-full bg-slate-600 ml-2"></span> Meta de Ventas
+        </div>
+      </div>
+
+      <!-- Grid: Charts and Table -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: Bar Chart (7 cols) -->
+        <div class="lg:col-span-7 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+              <span class="material-symbols-outlined text-blue-400 text-[18px]">bar_chart</span>
+              Facturación vs Cuota Asignada (en Miles S/.)
+            </h3>
+            <span class="text-xs text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">Todas por encima del 95%</span>
+          </div>
+          <div class="h-64 sm:h-72 w-full relative">
+            <canvas id="chartStores"></canvas>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5 pt-5 border-t border-slate-100 text-center">
+            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100/80">
+              <span class="text-[11px] text-slate-500 block">E-commerce B2B</span>
+              <span class="text-sm font-bold text-blue-400">S/ 524,000</span>
+              <span class="text-[10px] text-emerald-400 block font-semibold">+38.5% MoM</span>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100/80">
+              <span class="text-[11px] text-slate-500 block">San Miguel (Mayorista)</span>
+              <span class="text-sm font-bold text-indigo-400">S/ 412,000</span>
+              <span class="text-[10px] text-emerald-400 block font-semibold">+14.2% MoM</span>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100/80">
+              <span class="text-[11px] text-slate-500 block">Magdalena (Central)</span>
+              <span class="text-sm font-bold text-amber-400">S/ 328,000</span>
+              <span class="text-[10px] text-emerald-400 block font-semibold">+8.1% MoM</span>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-100/80">
+              <span class="text-[11px] text-slate-500 block">San Isidro (HORECA)</span>
+              <span class="text-sm font-bold text-emerald-400">S/ 221,250</span>
+              <span class="text-[10px] text-emerald-400 block font-semibold">+24.7% MoM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Donut Chart & Participation (5 cols) -->
+        <div class="lg:col-span-5 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+              <span class="material-symbols-outlined text-amber-400 text-[18px]">pie_chart</span>
+              Distribución de Cuota de Venta por Canal
+            </h3>
+            <span class="text-xs text-slate-500">Total: S/ 1.48M</span>
+          </div>
+          <div class="h-56 sm:h-64 w-full relative flex items-center justify-center">
+            <canvas id="chartStoreShare"></canvas>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-100/80 text-xs space-y-2">
+            <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-100 flex items-start gap-3">
+              <span class="material-symbols-outlined text-blue-400 text-[18px] shrink-0 mt-0.5">lightbulb</span>
+              <p class="text-slate-700 text-xs leading-relaxed">
+                <strong class="text-slate-900">Insight para el Empresario:</strong> El <strong class="text-blue-700">canal E-commerce B2B</strong> ya superó a las tiendas físicas en volumen neto (35.3%) y reduce el costo de intermediación en un <strong class="text-emerald-400">14%</strong>. La sucursal San Isidro registra el ticket promedio más alto (S/ 574) gracias a restaurantes gourmet.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Detailed Branch Table -->
+      <div class="glass-card rounded-2xl overflow-hidden">
+        <div class="px-7 py-5 border-b border-blue-100 flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <span class="material-symbols-outlined text-slate-500 text-[18px]">table_chart</span>
+            Matriz Comparativa de Rendimiento Operativo
+          </h3>
+          <span class="text-xs text-slate-500">Actualizado hace 2 min</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-blue-50/60 text-slate-600 uppercase tracking-wider font-bold text-[11px] border-b border-blue-100">
+              <tr>
+                <th class="px-7 py-4">Tienda / Canal</th>
+                <th class="px-7 py-4">Tipo de Operación</th>
+                <th class="px-7 py-4">Ventas Netas</th>
+                <th class="px-7 py-4">Meta Asignada</th>
+                <th class="px-7 py-4">% Cumplimiento</th>
+                <th class="px-7 py-4">Ticket Medio</th>
+                <th class="px-7 py-4">Transacciones</th>
+                <th class="px-7 py-4">Margen Operativo</th>
+                <th class="px-7 py-4">Vendedor Líder</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700 font-medium">
+              <tr class="hover:bg-blue-50/40 transition-colors">
+                <td class="px-7 py-4.5">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">
+                      <span class="material-symbols-outlined text-[18px]">language</span>
+                    </div>
+                    <div>
+                      <span class="font-bold text-slate-900 block">E-commerce B2B (web-market)</span>
+                      <span class="text-[10px] text-slate-500">Canal Digital Mayorista 24/7</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-7 py-4.5"><span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-700 border border-blue-500/20">Digital Autoservicio</span></td>
+                <td class="px-7 py-4.5 font-bold text-slate-900">S/ 524,000</td>
+                <td class="px-6 py-4 text-slate-500">S/ 480,000</td>
+                <td class="px-7 py-4.5"><span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">109.2%</span></td>
+                <td class="px-7 py-4.5">S/ 409.38</td>
+                <td class="px-7 py-4.5">1,280 pedidos</td>
+                <td class="px-6 py-4 text-emerald-400 font-semibold">31.4%</td>
+                <td class="px-6 py-4 text-slate-700">Bot B2B / Web Inbound</td>
+              </tr>
+              <tr class="hover:bg-blue-50/40 transition-colors">
+                <td class="px-7 py-4.5">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold">
+                      <span class="material-symbols-outlined text-[18px]">warehouse</span>
+                    </div>
+                    <div>
+                      <span class="font-bold text-slate-900 block">Sucursal San Miguel</span>
+                      <span class="text-[10px] text-slate-500">Av. La Marina 1840 (Mayorista)</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-7 py-4.5"><span class="px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-800 border border-indigo-500/20">Hub Mayorista Físico</span></td>
+                <td class="px-7 py-4.5 font-bold text-slate-900">S/ 412,000</td>
+                <td class="px-6 py-4 text-slate-500">S/ 400,000</td>
+                <td class="px-7 py-4.5"><span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">103.0%</span></td>
+                <td class="px-7 py-4.5">S/ 462.92</td>
+                <td class="px-7 py-4.5">890 pedidos</td>
+                <td class="px-6 py-4 text-emerald-400 font-semibold">27.8%</td>
+                <td class="px-6 py-4 text-slate-700">Carlos Mendoza (Ejecutivo)</td>
+              </tr>
+              <tr class="hover:bg-blue-50/40 transition-colors">
+                <td class="px-7 py-4.5">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                      <span class="material-symbols-outlined text-[18px]">store</span>
+                    </div>
+                    <div>
+                      <span class="font-bold text-slate-900 block">Tienda Central Magdalena</span>
+                      <span class="text-[10px] text-slate-500">Jr. Bolognesi 320 (Sede Matriz)</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-7 py-4.5"><span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-800 border border-amber-500/20">Tienda Física + Mostrador</span></td>
+                <td class="px-7 py-4.5 font-bold text-slate-900">S/ 328,000</td>
+                <td class="px-6 py-4 text-slate-500">S/ 330,000</td>
+                <td class="px-7 py-4.5"><span class="text-amber-400 font-bold bg-amber-500/10 px-2 py-0.5 rounded">99.4%</span></td>
+                <td class="px-7 py-4.5">S/ 315.38</td>
+                <td class="px-7 py-4.5">1,040 pedidos</td>
+                <td class="px-6 py-4 text-emerald-400 font-semibold">26.5%</td>
+                <td class="px-6 py-4 text-slate-700">Patricia Ramos (Jefa de Tienda)</td>
+              </tr>
+              <tr class="hover:bg-blue-50/40 transition-colors">
+                <td class="px-7 py-4.5">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                      <span class="material-symbols-outlined text-[18px]">restaurant</span>
+                    </div>
+                    <div>
+                      <span class="font-bold text-slate-900 block">Hub San Isidro / Miraflores</span>
+                      <span class="text-[10px] text-slate-500">Calle Las Begonias 450 (HORECA)</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-7 py-4.5"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-800 border border-emerald-500/20">Showroom Gastronómico</span></td>
+                <td class="px-7 py-4.5 font-bold text-slate-900">S/ 221,250</td>
+                <td class="px-6 py-4 text-slate-500">S/ 190,000</td>
+                <td class="px-7 py-4.5"><span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">116.4%</span></td>
+                <td class="px-6 py-4 font-bold text-amber-800">S/ 574.68 (Top)</td>
+                <td class="px-7 py-4.5">385 pedidos</td>
+                <td class="px-6 py-4 text-emerald-400 font-bold">33.2%</td>
+                <td class="px-6 py-4 text-slate-700">Rodrigo Valdivia (Key Account)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. QUÉ EMPRESA COMPRA MÁS (TOP CLIENTES B2B & QUÉ PRODUCTO COMPRAN) -->
+    <section id="section-empresas" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="text-xl font-display font-bold text-slate-900 tracking-tight">2. ¿Qué Empresa Compra Más y Qué Productos Adquieren?</h2>
+            <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-800 font-semibold border border-amber-500/30">Cuentas Clave B2B</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">Identificación de las 10 empresas de mayor volumen, producto estrella por cliente y estado de fidelidad comercial.</p>
+        </div>
+
+        <!-- Filter and Search inside Companies -->
+        <div class="flex items-center gap-2">
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-500 text-[16px]">search</span>
+            <input type="text" id="companySearchInput" placeholder="Buscar por RUC o Razón Social..." class="pl-8 pr-3 py-2 bg-white text-xs text-slate-700 border border-slate-200 rounded-lg placeholder:text-slate-500 focus:border-blue-500 shadow-xs outline-none w-56 sm:w-64" />
+          </div>
+          <select id="sectorFilterSelect" class="py-2 px-3 bg-white text-xs text-slate-700 border border-slate-200 rounded-lg shadow-xs outline-none cursor-pointer">
+            <option value="all">Todos los Sectores</option>
+            <option value="pollerias">Pollerías & Brasas</option>
+            <option value="dark_kitchens">Dark Kitchens & Delivery</option>
+            <option value="horeca">Restaurantes & Parrillas</option>
+            <option value="cafes">Cafeterías & Panaderías</option>
+            <option value="distribuidores">Distribuidores Mayoristas</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Pareto Chart & Top Client Highlights -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Pareto Chart (8 cols) -->
+        <div class="lg:col-span-8 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                <span class="material-symbols-outlined text-amber-400 text-[18px]">leaderboard</span>
+                Top 8 Empresas por Facturación Total (Octubre 2026)
+              </h3>
+              <p class="text-[11px] text-slate-500">Regla de Pareto: El Top 10 representa el <strong class="text-amber-800">49.4%</strong> de las ventas totales de la empresa.</p>
+            </div>
+            <span class="text-xs text-slate-500 bg-white px-2.5 py-1 rounded">Expresado en Miles de Soles (S/.)</span>
+          </div>
+          <div class="h-64 sm:h-72 w-full relative">
+            <canvas id="chartTopCompanies"></canvas>
+          </div>
+        </div>
+
+        <!-- Executive Key Account Alert (4 cols) -->
+        <div class="lg:col-span-4 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between"
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                <span class="material-symbols-outlined text-emerald-400 text-[18px]">verified_user</span>
+                Diagnóstico de Cartera B2B
+              </h3>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-800 px-2 py-0.5 rounded font-bold">SUNAT OK</span>
+            </div>
+
+            <!-- Metric Box 1 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/80 space-y-1.5">
+              <div class="text-[11px] text-slate-500 flex items-center justify-between">
+                <span>Concentración de Clientes Top:</span>
+                <span class="text-amber-400 font-bold">Media-Alta</span>
+              </div>
+              <div class="text-base font-bold text-slate-900">Top 1: Corp. Gastronómica Lima</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Factura <strong class="text-amber-400">S/ 142,850.00</strong> (9.6% del total). Su producto estrella: <span class="text-blue-700">Envase Bivalva Caña Pamolsa 9x9"</span>.
+              </p>
+            </div>
+
+            <!-- Metric Box 2 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/80 space-y-1.5">
+              <div class="text-[11px] text-slate-500 flex items-center justify-between">
+                <span>Cliente con Mayor Crecimiento:</span>
+                <span class="text-emerald-400 font-bold">+45% MoM</span>
+              </div>
+              <div class="text-base font-bold text-slate-900">Dark Kitchens Hub Perú S.A.C.</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Pasó de S/ 66K a <strong class="text-emerald-400">S/ 96,720.00</strong> al centralizar 15 marcas virtuales de delivery en Magdalena y San Miguel.
+              </p>
+            </div>
+
+            <!-- Alerta de Recompra Inteligente -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-rose-50/70 border border-rose-200/80 space-y-1.5">
+              <div class="flex items-center justify-between text-rose-800 text-[11px] font-bold">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[15px]">notification_important</span> Alerta de Recompra (IA)
+                </span>
+                <span>¡Riesgo de Fuga!</span>
+              </div>
+              <div class="text-xs text-slate-900 font-bold">Catering & Banquetes Eventos Lima</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                No realiza pedido desde hace <strong class="text-rose-400">18 días</strong> (ciclo usual: 12 días). Se envió notificación al vendedor asignado.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-blue-100/80 text-center">
+            <span class="text-[11px] text-slate-500">Haga clic en cualquier empresa para ver su ficha completa.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Companies Table -->
+      <div class="glass-card rounded-2xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-blue-100/80 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="material-symbols-outlined text-slate-500 text-[18px]">corporate_fare</span>
+              Directorio de Cuentas Corporativas B2B y Comportamiento de Compra
+            </h3>
+            <span class="text-xs text-slate-500">Mostrando datos reales de facturación electrónica SUNAT</span>
+          </div>
+          <div class="text-xs text-slate-500">
+            Total Empresas Listadas: <span class="font-bold text-white" id="companyCountBadge">10</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs" id="companyTable">
+            <thead class="bg-blue-50/60 text-slate-600 uppercase tracking-wider font-bold text-[11px] border-b border-blue-100">
+              <tr>
+                <th class="px-7 py-4">Empresa / Razón Social</th>
+                <th class="px-7 py-4">RUC & Estado</th>
+                <th class="px-7 py-4">Giro Comercial</th>
+                <th class="px-7 py-4">Monto Facturado</th>
+                <th class="px-7 py-4">Producto Más Comprado</th>
+                <th class="px-7 py-4">Frecuencia</th>
+                <th class="px-7 py-4">Condición Pago</th>
+                <th class="px-7 py-4">Nivel Cuenta</th>
+                <th class="px-6 py-3.5 text-center">Acción</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-slate-700 font-medium" id="companyTableBody">
+              <!-- Dynamically populated or static with high fidelity -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUCTOS ESTRELLA Y MATRIZ DE RENTABILIDAD -->
+    <section id="section-productos" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="text-xl font-display font-bold text-slate-900 tracking-tight">3. Productos Estrella y Análisis de Rentabilidad</h2>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-800 font-semibold border border-emerald-500/30">Mix de Portafolio</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">Identificación de artículos de mayor rotación, margen unitario y riesgo de desabastecimiento (quiebre de stock).</p>
+        </div>
+
+        <!-- Filter by Category -->
+        <div class="flex items-center gap-2">
+          <select id="productCatFilter" class="py-2 px-3 bg-white text-xs text-slate-700 border border-slate-200 rounded-lg shadow-xs outline-none cursor-pointer">
+            <option value="all">Todas las Categorías</option>
+            <option value="biodegradable">Descartables Biodegradables (Pamolsa)</option>
+            <option value="envases">Envases & Vasos HORECA</option>
+            <option value="embalaje">Embalaje & Film Stretch</option>
+            <option value="abarrotes">Abarrotes Gastronómicos (Aceites)</option>
+            <option value="limpieza">Higiene & Limpieza Industrial</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Breakdown Chart & Top Product Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Doughnut / Pie Chart: Category Mix (4 cols) -->
+        <div class="lg:col-span-4 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-semibold text-slate-800 flex items-center gap-2 mb-1">
+              <span class="material-symbols-outlined text-emerald-400 text-[18px]">donut_large</span>
+              Composición por Familia de Producto
+            </h3>
+            <p class="text-[11px] text-slate-500">Participación en la facturación total.</p>
+          </div>
+          <div class="h-60 sm:h-64 w-full relative flex items-center justify-center my-3">
+            <canvas id="chartCategoryMix"></canvas>
+          </div>
+          <div class="space-y-1.5 pt-3 border-t border-blue-100/80 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-1.5 text-slate-600">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Biodegradables (Pamolsa)
+              </span>
+              <span class="font-bold text-slate-900">44.2%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-1.5 text-slate-600">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Envases & Vasos HORECA
+              </span>
+              <span class="font-bold text-slate-900">28.4%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-1.5 text-slate-600">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Abarrotes Mayoristas (Aceites)
+              </span>
+              <span class="font-bold text-slate-900">15.8%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-1.5 text-slate-600">
+                <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> Embalaje & Limpieza
+              </span>
+              <span class="font-bold text-slate-900">11.6%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Products Ranking List & Stock Alert (8 cols) -->
+        <div class="lg:col-span-8 glass-card p-7 sm:p-8 rounded-3xl flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                <span class="material-symbols-outlined text-amber-400 text-[18px]">stars</span>
+                Ranking de Productos Estrella (Volumen vs Margen de Utilidad)
+              </h3>
+              <p class="text-[11px] text-slate-500">Los 6 artículos más rentables y vendidos en Plaza Multipack este mes.</p>
+            </div>
+            <span class="text-xs text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded font-semibold">
+              Pamolsa Líder en Ventas
+            </span>
+          </div>
+
+          <!-- Product Grid Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="productsRankingGrid">
+            
+            <!-- Product 1 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center">#1</span>
+                    <span class="text-xs font-bold text-slate-900">Envase Bivalva Caña Pamolsa 9x9"</span>
+                  </div>
+                  <span class="text-[10px] bg-emerald-500/20 text-emerald-800 font-bold px-2 py-0.5 rounded">Margen 34.5%</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Caja Master x200 unidades • Presentación Pollerías</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 284,500</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">1,420 Cajas</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Cobertura</span>
+                    <span class="text-xs font-bold text-emerald-400">18 días</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-slate-600 text-white font-black text-xs flex items-center justify-center">#2</span>
+                    <span class="text-xs font-bold text-slate-900">Vaso Polipapel Térmico 12oz + Tapa</span>
+                  </div>
+                  <span class="text-[10px] bg-blue-500/20 text-blue-700 font-bold px-2 py-0.5 rounded">Margen 31.0%</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Caja Master x1000 unidades • Cafeterías & HORECA</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 215,800</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">1,180 Cajas</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Cobertura</span>
+                    <span class="text-xs font-bold text-emerald-400">14 días</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-amber-700 text-white font-black text-xs flex items-center justify-center">#3</span>
+                    <span class="text-xs font-bold text-slate-900">Aceite Primor Gastronómico 18L</span>
+                  </div>
+                  <span class="text-[10px] bg-amber-500/20 text-amber-800 font-bold px-2 py-0.5 rounded">Margen 14.8%</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Balde Industrial • Chifas, Pollerías & Restaurantes</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 194,200</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">2,150 Baldes</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Cobertura</span>
+                    <span class="text-xs font-bold text-emerald-400">22 días</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-white font-black text-xs flex items-center justify-center">#4</span>
+                    <span class="text-xs font-bold text-slate-900">Bolsa Kraft Delivery Asas Reforzadas</span>
+                  </div>
+                  <span class="text-[10px] bg-indigo-500/20 text-indigo-800 font-bold px-2 py-0.5 rounded">Margen 36.2%</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Millar • Dark Kitchens & Apps de Comida</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 168,900</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">940 Millares</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Cobertura</span>
+                    <span class="text-xs font-bold text-amber-400">12 días</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 (Alert Stock) -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-rose-200 hover:border-rose-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-white font-black text-xs flex items-center justify-center">#5</span>
+                    <span class="text-xs font-bold text-slate-900">Bowl Ensalada PET Cristal 32oz Hermético</span>
+                  </div>
+                  <span class="text-[10px] bg-rose-500/20 text-rose-800 font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">warning</span> ¡Stock 8 días!
+                  </span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Caja x300 unidades • Poké & Comida Saludable</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 142,300</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">850 Cajas</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Margen</span>
+                    <span class="text-xs font-bold text-emerald-400">38.0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white/80 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-slate-700 text-white font-black text-xs flex items-center justify-center">#6</span>
+                    <span class="text-xs font-bold text-slate-900">Film Stretch Paletizador 20 micras</span>
+                  </div>
+                  <span class="text-[10px] bg-emerald-500/20 text-emerald-800 font-bold px-2 py-0.5 rounded">Margen 22.5%</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Caja x4 rollos • Embalaje Industrial Almacenes</p>
+                <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-blue-100/80 text-center">
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Venta Total</span>
+                    <span class="text-xs font-bold text-slate-900">S/ 118,400</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Volumen</span>
+                    <span class="text-xs font-bold text-slate-800">1,820 Rollos</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-slate-500 block">Cobertura</span>
+                    <span class="text-xs font-bold text-emerald-400">25 días</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. ZONAS DE COMPRA Y COBERTURA LOGÍSTICA EN LIMA -->
+    <section id="section-zonas" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="text-xl font-display font-bold text-slate-900 tracking-tight">4. Zonas de Compra y Despacho Logístico (Lima y Provincias)</h2>
+            <span class="text-xs px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-semibold border border-teal-500/30">Geolocalización</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">Concentración de facturación por distritos de Lima Metropolitana y envíos por agencia al interior del país.</p>
+        </div>
+        <div class="text-xs text-slate-500 flex items-center gap-2">
+          <span class="material-symbols-outlined text-amber-400 text-[18px]">local_shipping</span>
+          <span>Flete Gratis &gt; S/ 700: <strong>68% de los despachos aplican</strong></span>
+        </div>
+      </div>
+
+      <!-- Zone Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Zone 1: Lima Centro & Oeste -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between border-l-4 border-l-blue-500">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Zona 1: Base Matriz</span>
+              <span class="text-xs bg-blue-500/20 text-blue-700 font-bold px-2 py-0.5 rounded">38.0% Ventas</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mt-2">Lima Centro y Oeste</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Magdalena, San Miguel, Pueblo Libre, Jesús María</p>
+            
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Facturación:</span>
+                <span class="font-bold text-slate-900">S/ 564,400</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Total Despachos:</span>
+                <span class="font-bold text-slate-800">1,420 envíos</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Tiempo Medio Entrega:</span>
+                <span class="font-bold text-emerald-400">2.1 horas</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Costo Flete Medio:</span>
+                <span class="font-bold text-slate-800">S/ 11.20</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-100/80 text-[11px] text-slate-500">
+            168 empresas y restaurantes atendidos.
+          </div>
+        </div>
+
+        <!-- Zone 2: Lima Moderna & Sur -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between border-l-4 border-l-indigo-500">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Zona 2: Alta Gama</span>
+              <span class="text-xs bg-indigo-500/20 text-indigo-800 font-bold px-2 py-0.5 rounded">31.0% Ventas</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mt-2">Lima Moderna y Sur</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Miraflores, San Isidro, Surco, San Borja, Barranco</p>
+            
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Facturación:</span>
+                <span class="font-bold text-slate-900">S/ 460,400</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Total Despachos:</span>
+                <span class="font-bold text-slate-800">980 envíos</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Tiempo Medio Entrega:</span>
+                <span class="font-bold text-emerald-400">3.4 horas</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Ticket Promedio Zona:</span>
+                <span class="font-bold text-amber-800">S/ 4,690.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-100/80 text-[11px] text-slate-500">
+            Mayor consumo de envases compostables premium.
+          </div>
+        </div>
+
+        <!-- Zone 3: Lima Norte & Este -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between border-l-4 border-l-amber-500">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Zona 3: Alto Volumen</span>
+              <span class="text-xs bg-amber-500/20 text-amber-800 font-bold px-2 py-0.5 rounded">18.0% Ventas</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mt-2">Lima Norte y Este</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Los Olivos, SMP, Ate Vitarte, SJL, Independencia</p>
+            
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Facturación:</span>
+                <span class="font-bold text-slate-900">S/ 267,350</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Total Despachos:</span>
+                <span class="font-bold text-slate-800">560 envíos</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Tiempo Medio Entrega:</span>
+                <span class="font-bold text-slate-800">5.6 horas</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Mix Principal:</span>
+                <span class="font-bold text-amber-800">Aceites & Bolsas</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-100/80 text-[11px] text-slate-500">
+            Fuerte demanda de pollerías y cadenas de chifas.
+          </div>
+        </div>
+
+        <!-- Zone 4: Envíos a Provincias -->
+        <div class="glass-card p-6 sm:p-7 rounded-2xl flex flex-col justify-between border-l-4 border-l-teal-500">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Zona 4: Expansión</span>
+              <span class="text-xs bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded">13.0% Ventas</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mt-2">Envíos a Provincias</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Arequipa, Trujillo, Cusco, Huancayo (Agencias)</p>
+            
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Facturación:</span>
+                <span class="font-bold text-slate-900">S/ 193,100</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Pallets / Fardos:</span>
+                <span class="font-bold text-slate-800">210 bultos</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Agencias Aliadas:</span>
+                <span class="font-bold text-slate-800">Flores, Marvisur</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Pago Flete:</span>
+                <span class="font-bold text-emerald-400">Destino (0 costo)</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-100/80 text-[11px] text-slate-500">
+            Oportunidad para abrir canal de distribución regional.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. EL NÚCLEO ESTRATÉGICO: CÓMO SE IMPLEMENTA Y QUÉ RESULTADOS OBTIENE EL EMPRESARIO -->
+    <section id="section-implementacion" class="space-y-8 pt-6 border-t border-blue-100">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30 text-xs font-bold">
+          <span class="material-symbols-outlined text-[16px]">business_center</span>
+          <span>Propuesta de Valor para la Dirección de la Empresa</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 tracking-tight">
+          ¿Cómo se Implementa y Qué Resultados Concretos Obtendrá?
+        </h2>
+        <p class="text-sm text-slate-500">
+          Un plan de acción tecnológico diseñado para transformar los datos de facturación en mayores utilidades, sin interrumpir la operación comercial de Plaza Multipack.
+        </p>
+      </div>
+
+      <!-- Two Pillars: How It Works vs What Results You Get -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Pillar A: ¿CÓMO SE IMPLEMENTA? (Arquitectura Técnica) -->
+        <div class="glass-card p-8 sm:p-10 rounded-3xl space-y-7 relative overflow-hidden border border-blue-200/90 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">
+                <span class="material-symbols-outlined text-[24px]">account_tree</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-display font-bold text-slate-900">1. ¿Cómo se Implementa?</h3>
+                <span class="text-xs text-blue-400 font-semibold">Hoja de Ruta en 4 Fases (30 días)</span>
+              </div>
+            </div>
+            <span class="text-xs bg-blue-100/80 text-blue-800 px-3 py-1 rounded-full border border-blue-200 font-semibold">Sin cambiar su ERP actual</span>
+          </div>
+
+          <!-- Step by Step -->
+          <div class="space-y-4">
+            
+            <!-- Step 1 -->
+            <div class="flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/90">
+              <div class="w-7 h-7 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Conexión con Facturador SUNAT y POS de Tiendas (Días 1 a 10)</h4>
+                <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                  Conexión no invasiva mediante API o Webhook a los comprobantes de pago (XML de Facturas y Boletas). Los datos fluyen automáticamente cada vez que se emite una venta en Magdalena, San Miguel, San Isidro o la web.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/90">
+              <div class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Unificación y Limpieza de Datos Multitienda (Días 11 a 18)</h4>
+                <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                  Homologación de códigos SKU (Pamolsa, Reyma, Aceites), consolidación de RUCs únicos de clientes y unificación del stock físico y digital en un solo cerebro de datos seguro en la nube.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/90">
+              <div class="w-7 h-7 rounded-full bg-amber-600 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Motor de Alertas y Predicción de Recompra (Días 19 a 25)</h4>
+                <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                  Configuración del algoritmo que detecta el ciclo de pedido de cada pollería o restaurante. Si un cliente habitual no compra a tiempo, se envía una alerta automática con proforma por WhatsApp a su vendedor.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex items-start gap-4 p-4.5 sm:p-5 rounded-2xl bg-blue-50/40 border border-blue-100/90">
+              <div class="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Despliegue del Dashboard y Capacitación Comercial (Días 26 a 30)</h4>
+                <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                  Puesta en marcha del tablero accesible en PC, tablet y celular para Gerencia General, Jefes de Tienda y Ejecutivos de Cuenta, con métricas en tiempo real.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p-4.5 rounded-2xl bg-blue-50/80 border border-blue-200 flex items-center gap-3.5">
+            <span class="material-symbols-outlined text-blue-400 text-[24px] shrink-0">speed</span>
+            <div class="text-xs text-slate-700">
+              <strong class="text-white">Cero tiempo muerto:</strong> Las tiendas continúan operando con normalidad. La integración se realiza en paralelo sin interrumpir ni un solo minuto de venta.
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar B: ¿QUÉ RESULTADOS VA A OBTENER? (Impacto de Negocio) -->
+        <div class="glass-card p-8 sm:p-10 rounded-3xl space-y-7 relative overflow-hidden border border-blue-200/90 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                <span class="material-symbols-outlined text-[24px]">trending_up</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-display font-bold text-slate-900">2. ¿Qué Resultados Concretos Obtendrá?</h3>
+                <span class="text-xs text-emerald-400 font-semibold">Impacto Financiero y Operativo Medible</span>
+              </div>
+            </div>
+            <span class="text-xs bg-emerald-500/10 text-emerald-800 px-3 py-1 rounded-full border border-emerald-500/30 font-bold">ROI &lt; 45 días</span>
+          </div>
+
+          <!-- 4 Core Results -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Result 1 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100/90 shadow-xs space-y-2">
+              <div class="text-2xl font-display font-extrabold text-emerald-400">+22% Retención</div>
+              <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Cero Fuga de Clientes</h4>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                Detecta clientes corporativos que disminuyen volumen antes de que migren a la competencia del Mercado Central o distribuidores informales.
+              </p>
+            </div>
+
+            <!-- Result 2 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100/90 shadow-xs space-y-2">
+              <div class="text-2xl font-display font-extrabold text-blue-400">-35% Quiebres</div>
+              <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Disponibilidad de Stock</h4>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                Pronóstico de compras a Pamolsa y Alicorp con 15 días de anticipación, eliminando ventas perdidas por falta de envases los fines de semana.
+              </p>
+            </div>
+
+            <!-- Result 3 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100/90 shadow-xs space-y-2">
+              <div class="text-2xl font-display font-extrabold text-amber-400">+15% Ticket</div>
+              <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Venta Cruzada Inteligente</h4>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                Alerta al vendedor para ofrecer combos completos: si compran cajas de comida, sugerir cubiertos compostables, vasos y bolsas con descuento por escala.
+              </p>
+            </div>
+
+            <!-- Result 4 -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-blue-100/90 shadow-xs space-y-2">
+              <div class="text-2xl font-display font-extrabold text-indigo-400">15 hrs / sem</div>
+              <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Ahorro en Reportes</h4>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                Eliminación de archivos Excel manuales enviados por WhatsApp entre sucursales. La Gerencia General tiene la verdad de las ventas en un solo clic.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="p-4.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-center gap-3.5">
+            <span class="material-symbols-outlined text-emerald-400 text-[24px] shrink-0">monetization_on</span>
+            <div class="text-xs text-slate-700">
+              <strong class="text-white">Impacto Económico Estimado:</strong> Para una facturación de S/ 1.5M mensuales, este sistema genera un incremento neto estimado de <strong class="text-emerald-400 font-bold">+S/ 210,000.00 PEN al año</strong> en utilidades operativas.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 7. CALCULADORA INTERACTIVA DE RETORNO DE INVERSIÓN (ROI) PARA EL EMPRESARIO -->
+      <div id="section-roi" class="glass-card p-8 sm:p-10 rounded-3xl space-y-7 border border-blue-200/90 shadow-md">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-amber-400 text-[24px]">calculate</span>
+              <h3 class="text-xl font-display font-extrabold text-slate-900">Simulador Interactivo de Retorno de Inversión (ROI)</h3>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">
+              Ajuste los valores de acuerdo a las cifras de su negocio para proyectar el beneficio económico anual que generará la implementación.
+            </p>
+          </div>
+          <span class="text-xs text-amber-800 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 font-bold">
+            Simulación Dinámica en Tiempo Real
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Sliders (7 cols) -->
+          <div class="lg:col-span-7 space-y-5">
+            
+            <!-- Slider 1: Facturación Mensual -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-700 font-semibold">Facturación Mensual Actual de la Empresa:</span>
+                <span class="text-amber-400 font-bold text-sm" id="sliderValRevenue">S/ 1,500,000</span>
+              </div>
+              <input type="range" id="sliderRevenue" min="300000" max="4000000" step="50000" value="1500000" class="w-full accent-amber-500 cursor-pointer h-2 bg-slate-700 rounded-lg" />
+              <div class="flex justify-between text-[10px] text-slate-500">
+                <span>S/ 300,000</span>
+                <span>S/ 2,000,000</span>
+                <span>S/ 4,000,000</span>
+              </div>
+            </div>
+
+            <!-- Slider 2: Estimación de Ventas Perdidas por Quiebre o Fuga -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-700 font-semibold">Ventas perdidas por falta de stock o clientes que dejan de comprar:</span>
+                <span class="text-rose-400 font-bold text-sm" id="sliderValLoss">8%</span>
+              </div>
+              <input type="range" id="sliderLoss" min="2" max="20" step="1" value="8" class="w-full accent-rose-500 cursor-pointer h-2 bg-slate-700 rounded-lg" />
+              <div class="flex justify-between text-[10px] text-slate-500">
+                <span>2% (Mínimo)</span>
+                <span>8% (Promedio Retail B2B)</span>
+                <span>20% (Crítico)</span>
+              </div>
+            </div>
+
+            <!-- Slider 3: Margen Bruto Promedio -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-700 font-semibold">Margen Bruto Ponderado de Ganancia:</span>
+                <span class="text-emerald-400 font-bold text-sm" id="sliderValMargin">28%</span>
+              </div>
+              <input type="range" id="sliderMargin" min="15" max="45" step="1" value="28" class="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-700 rounded-lg" />
+              <div class="flex justify-between text-[10px] text-slate-500">
+                <span>15%</span>
+                <span>28% (Plaza Multipack actual)</span>
+                <span>45%</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Result Card (5 cols) -->
+          <div class="lg:col-span-5 p-7 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-50 via-white to-blue-50/80 border border-blue-200 text-center space-y-5 shadow-sm">
+            <span class="text-[11px] uppercase tracking-wider text-amber-800 font-bold block">
+              Beneficio Proyectado con el Dashboard
+            </span>
+
+            <div class="space-y-1">
+              <span class="text-xs text-slate-500 block">Recuperación & Crecimiento Mensual:</span>
+              <div class="text-2xl sm:text-3xl font-display font-extrabold text-blue-900" id="calcMonthlyGain">
+                S/ 33,600.00
+              </div>
+              <span class="text-[11px] text-emerald-400 font-semibold block">Margen neto adicional al mes</span>
+            </div>
+
+            <div class="pt-4 border-t border-blue-100/80 space-y-1">
+              <span class="text-xs text-slate-500 block">Impacto Económico Anual Acumulado:</span>
+              <div class="text-3xl sm:text-4xl font-display font-black text-amber-600" id="calcAnnualGain">
+                S/ 403,200.00
+              </div>
+              <span class="text-xs text-slate-700 font-medium block">
+                Retorno de la inversión (ROI): <strong class="text-emerald-400">Menos de 30 días</strong>
+              </span>
+            </div>
+
+            <button onclick="document.getElementById('openPresentationBtn').click()" class="w-full py-3 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 text-amber-950 font-display font-bold text-xs shadow-xs transition-transform hover:scale-[1.02] flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">slideshow</span>
+              <span>Ver Presentación Completa en Diapositivas</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 border-t border-blue-100 bg-white/80 py-8 px-6 text-xs text-slate-500">
+    <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="font-display font-bold text-white">Plaza Multipack S.A.C.</span>
+        <span>•</span>
+        <span>RUC 20601234567</span>
+        <span>•</span>
+        <span>Magdalena del Mar, Lima, Perú</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white transition-colors">Portal Web Principal</a>
+        <a href="catalogo.html" class="hover:text-white transition-colors">Catálogo de Productos</a>
+        <a href="checkout.html" class="hover:text-white transition-colors">Checkout SUNAT</a>
+        <span class="text-slate-500">|</span>
+        <span class="text-emerald-400 flex items-center gap-1 font-semibold">
+          <span class="material-symbols-outlined text-[15px]">verified</span> Facturación Electrónica en Línea
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: CLIENT DRILL-DOWN (FICHA DE CLIENTE B2B) -->
+  <div id="clientModal" class="fixed inset-0 z-50 bg-white/40 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-card max-w-2xl w-full rounded-3xl p-7 sm:p-9 space-y-6 relative border border-blue-100 shadow-2xl animate-[fadeIn_0.2s_ease-out]">
+      
+      <!-- Close Button -->
+      <button id="closeClientModalBtn" class="absolute top-5 right-5 text-slate-500 hover:text-white w-8 h-8 rounded-full bg-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[28px]">domain</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-800 font-bold border border-amber-500/30" id="modalClientBadge">VIP DIAMANTE</span>
+            <span class="text-xs text-emerald-400 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">check_circle</span> SUNAT Activo y Habido
+            </span>
+          </div>
+          <h3 class="text-xl font-display font-extrabold text-slate-900 mt-1" id="modalClientName">Corporación Gastronómica Lima S.A.C.</h3>
+          <p class="text-xs text-slate-500 mt-0.5" id="modalClientRuc">RUC: 20554198211 • Cadena de Pollerías (8 locales)</p>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+        <div class="p-3.5 rounded-xl bg-blue-50/40 border border-blue-100">
+          <span class="text-[10px] text-slate-500 block uppercase">Facturación Total</span>
+          <span class="text-sm font-bold text-slate-900 mt-0.5 block" id="modalClientRevenue">S/ 142,850</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-blue-50/40 border border-blue-100">
+          <span class="text-[10px] text-slate-500 block uppercase">Frecuencia Compra</span>
+          <span class="text-sm font-bold text-amber-800 mt-0.5 block" id="modalClientFrequency">Cada 3 días</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-blue-50/40 border border-blue-100">
+          <span class="text-[10px] text-slate-500 block uppercase">Crédito Aprobado</span>
+          <span class="text-sm font-bold text-emerald-400 mt-0.5 block" id="modalClientCredit">15 días (S/ 50K)</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-blue-50/40 border border-blue-100">
+          <span class="text-[10px] text-slate-500 block uppercase">Próximo Pedido</span>
+          <span class="text-sm font-bold text-blue-400 mt-0.5 block" id="modalClientNextOrder">Mañana (Est.)</span>
+        </div>
+      </div>
+
+      <!-- Products bought breakdown -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center justify-between">
+          <span>Productos Comprados Recurrentemente</span>
+          <span class="text-[11px] text-slate-500 font-normal">% del gasto del cliente</span>
+        </h4>
+        <div class="space-y-2.5 text-xs" id="modalClientProductsList">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="pt-4 border-t border-blue-100/80 flex flex-wrap items-center justify-between gap-3">
+        <div class="text-xs text-slate-500">
+          Ejecutivo Asignado: <strong class="text-white">Carlos Mendoza (Sucursal San Miguel)</strong>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/51931653685" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>Contactar Asesor</span>
+          </a>
+          <button onclick="document.getElementById('closeClientModalBtn').click()" class="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-700 text-slate-700 text-xs font-semibold">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: PRESENTATION / PITCH MODE (SLIDE DECK FOR THE BUSINESS OWNER) -->
+  <div id="presentationModal" class="fixed inset-0 z-50 bg-white/60 backdrop-blur-xl hidden flex-col justify-between p-6 sm:p-10 overflow-y-auto">
+    
+    <!-- Top Bar: Slide Tracker & Exit -->
+    <div class="flex items-center justify-between max-w-5xl w-full mx-auto pb-4 border-b border-slate-800">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-black text-sm">
+          PM
+        </div>
+        <div>
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Presentación Ejecutiva para Directorio</span>
+          <h4 class="text-sm font-bold text-slate-900">Plaza Multipack S.A.C. — Inteligencia Comercial</h4>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="text-xs text-slate-500" id="slideCounter">Diapositiva 1 de 5</span>
+        <button id="closePresentationBtn" class="text-slate-500 hover:text-white px-3 py-1.5 rounded-lg bg-white border border-blue-100 text-xs font-bold flex items-center gap-1 transition-colors">
+          <span class="material-symbols-outlined text-[16px]">close</span>
+          <span>Salir de Presentación</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center Slide Content -->
+    <div class="max-w-4xl w-full mx-auto my-auto py-8 text-center" id="slideContainer">
+      <!-- Slides are dynamically switched via JS -->
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="flex items-center justify-between max-w-5xl w-full mx-auto pt-4 border-t border-slate-800">
+      <button id="prevSlideBtn" class="px-4 py-2 rounded-xl bg-white hover:bg-slate-700 text-white font-bold text-xs flex items-center gap-2 border border-blue-100 transition-colors">
+        <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+        <span>Anterior</span>
+      </button>
+
+      <!-- Dots Indicators -->
+      <div class="flex items-center gap-2" id="slideDots">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+      </div>
+
+      <button id="nextSlideBtn" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg transition-transform hover:scale-105">
+        <span>Siguiente</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Dashboard JavaScript Logic -->
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -19,62 +19,40 @@
       theme: {
         extend: {
           "colors": {
-            "secondary": "#855300",
+            "primary": "#1E40AF",
+            "primary-hover": "#1D4ED8",
+            "primary-container": "#2563EB",
+            "primary-soft": "#EFF6FF",
+            "primary-subtle": "#DBEAFE",
+            "royal-blue-vivid": "#2563EB",
+            "secondary": "#D97706",
+            "secondary-container": "#FDE68A",
+            "secondary-soft": "#FEF3C7",
+            "amber-bright": "#F59E0B",
+            "amber-soft": "#FEF3C7",
+            "amber-subtle": "#FFFBEB",
             "surface-clean": "#FFFFFF",
-            "on-background": "#131b2e",
-            "tertiary-container": "#004d34",
-            "inverse-primary": "#b2c5ff",
-            "on-tertiary": "#ffffff",
-            "amber-bright": "#EAB308",
-            "surface-container-low": "#f2f3ff",
-            "outline-variant": "#c4c6d3",
-            "primary-container": "#0f3d91",
-            "on-secondary-fixed-variant": "#653e00",
-            "tertiary": "#003422",
-            "on-primary-fixed": "#001848",
-            "emerald-surface": "#ECFDF5",
-            "surface-container-lowest": "#ffffff",
-            "secondary-fixed": "#ffddb8",
-            "surface-container": "#eaedff",
-            "surface": "#faf8ff",
-            "surface-container-high": "#e2e7ff",
-            "error-container": "#ffdad6",
-            "on-tertiary-container": "#4ec493",
-            "inverse-on-surface": "#eef0ff",
-            "on-tertiary-fixed-variant": "#005137",
+            "on-background": "#0F172A",
+            "tertiary-container": "#065F46",
+            "inverse-primary": "#BFDBFE",
+            "on-tertiary": "#FFFFFF",
+            "surface-container-low": "#F8FAFC",
+            "outline-variant": "#CBD5E1",
+            "emerald-surface": "#F0FDF4",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container": "#F1F5F9",
+            "surface": "#FFFFFF",
+            "surface-container-high": "#E2E8F0",
+            "surface-container-highest": "#E2E8F0",
             "surface-soft": "#F8FAFC",
-            "secondary-container": "#fea619",
-            "primary-fixed-dim": "#b2c5ff",
-            "surface-variant": "#dae2fd",
-            "surface-container-highest": "#dae2fd",
-            "royal-blue-vivid": "#1D4ED8",
-            "surface-dim": "#d2d9f4",
-            "on-primary-container": "#8eadff",
-            "on-error": "#ffffff",
-            "surface-tint": "#365aaf",
-            "on-secondary-container": "#684000",
-            "error": "#ba1a1a",
-            "inverse-surface": "#283044",
-            "text-muted": "#334155",
-            "surface-bright": "#faf8ff",
-            "tertiary-fixed-dim": "#68dba9",
-            "secondary-fixed-dim": "#ffb95f",
-            "border-hover": "#CBD5E1",
-            "on-surface": "#131b2e",
-            "tertiary-fixed": "#85f8c4",
-            "on-primary": "#ffffff",
-            "primary-fixed": "#dae2ff",
-            "border-hairline": "#E2E8F0",
-            "on-secondary": "#ffffff",
-            "outline": "#747783",
-            "on-surface-variant": "#434652",
             "surface-subtle": "#F1F5F9",
-            "on-error-container": "#93000a",
-            "on-primary-fixed-variant": "#174296",
-            "primary": "#00286a",
-            "on-tertiary-fixed": "#002114",
-            "background": "#faf8ff",
-            "on-secondary-fixed": "#2a1700"
+            "text-muted": "#64748B",
+            "border-hover": "#CBD5E1",
+            "on-surface": "#1E293B",
+            "border-hairline": "#E2E8F0",
+            "outline": "#94A3B8",
+            "on-surface-variant": "#475569",
+            "background": "#F8FAFC"
           },
           "borderRadius": {
             "DEFAULT": "0.25rem",
@@ -191,6 +169,12 @@
 </div>
 <!-- Action Cluster -->
 <div class="flex items-center gap-3 shrink-0">
+<!-- Dashboard Gerencial B2B -->
+<a class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-50 text-blue-900 hover:bg-blue-100 hover:text-blue-950 border border-blue-200/90 text-label-md font-bold transition-all shadow-xs group" href="dashboard.html">
+<span class="material-symbols-outlined text-[19px] text-blue-700 group-hover:scale-110 transition-transform">insights</span>
+<span>Dashboard Gerencial</span>
+<span class="px-2 py-0.5 bg-amber-100 text-amber-800 border border-amber-200/80 text-[10px] font-black rounded-md tracking-wider">PITCH</span>
+</a>
 <!-- Recompra Rápida -->
 <a class="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-lg text-label-md font-label-md text-on-surface-variant hover:text-royal-blue-vivid hover:bg-surface-soft transition-colors duration-150" href="#quick-reorder">
 <span class="material-symbols-outlined text-[19px]">receipt_long</span>
@@ -210,7 +194,7 @@
 <a class="flex items-center gap-2.5 px-4 py-2 bg-primary hover:bg-royal-blue-vivid text-surface-clean rounded-lg font-label-lg text-label-lg shadow-sm transition-all duration-150" href="checkout.html">
 <div class="relative flex items-center justify-center">
 <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
-<span class="absolute -top-1.5 -right-2 bg-amber-bright text-on-background text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+<span class="absolute -top-1.5 -right-2 bg-amber-200 text-amber-950 border border-amber-300 text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow-xs">0</span>
 </div>
 <span class="font-semibold tracking-tight">Mi Carrito (S/ 0.00)</span>
 </a>
@@ -311,8 +295,8 @@
 <!-- Mini Item 1: Primor 5L / Aceite -->
 <div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
 <div class="flex items-center gap-3.5">
-<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
-<img class="w-full h-full object-contain" data-alt="Galon de aceite vegetal Cocinero de cinco litros en envase transparente con etiqueta amarilla, fondo de estudio limpio blanco neutro con iluminacion suave comercial para ecommerce retail mayorista de abarrotes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg"/>
+<div class="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-slate-100 shadow-xs group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain drop-shadow-xs" data-alt="Galon de aceite vegetal Cocinero de cinco litros en envase transparente con etiqueta amarilla, fondo de estudio limpio blanco neutro con iluminacion suave comercial para ecommerce retail mayorista de abarrotes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg"/>
 </div>
 <div>
 <h4 class="text-body-md font-body-md font-bold text-on-surface">Aceite Cocinero Galón 5 Litros</h4>
@@ -328,8 +312,8 @@
 <!-- Mini Item 2: Pamolsa Fast 1Lt -->
 <div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
 <div class="flex items-center gap-3.5">
-<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
-<img class="w-full h-full object-contain" data-alt="Envase descartable transparente para comida caliente marca Pamolsa Deli con tapa bisagra hermetica sobre fondo blanco puro y minimalista en estilo de fotografia comercial de suministros de restaurantes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUhoGAl8TrTm9Oqgb86p_HobsKZyc51h2C5KyUs5V_3QBNJmZerZygbnDuLBUFs_gb3uKdvv9pedbmp4r2N9FSwkD3zkxOceFGZWQJPZ6Au9vt_D-FP1PXIXwlvo-R39m8UDFjNFW-QXj1aBn1B1M8eXoUgbrB_aGpWcyFpZ27iXX-LTFBgRqN7Reo176BokPYLDhsU23mEZ5ogOUMKhAYqEpBURtJVAB3-VS_4I65cHXSPiDXPtXu5g"/>
+<div class="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-slate-100 shadow-xs group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain drop-shadow-xs" data-alt="Envase descartable transparente para comida caliente marca Pamolsa Deli con tapa bisagra hermetica sobre fondo blanco puro y minimalista en estilo de fotografia comercial de suministros de restaurantes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUhoGAl8TrTm9Oqgb86p_HobsKZyc51h2C5KyUs5V_3QBNJmZerZygbnDuLBUFs_gb3uKdvv9pedbmp4r2N9FSwkD3zkxOceFGZWQJPZ6Au9vt_D-FP1PXIXwlvo-R39m8UDFjNFW-QXj1aBn1B1M8eXoUgbrB_aGpWcyFpZ27iXX-LTFBgRqN7Reo176BokPYLDhsU23mEZ5ogOUMKhAYqEpBURtJVAB3-VS_4I65cHXSPiDXPtXu5g"/>
 </div>
 <div>
 <h4 class="text-body-md font-body-md font-bold text-on-surface">Envase Pamolsa Deli 1Lt c/ Tapa</h4>
@@ -345,8 +329,8 @@
 <!-- Mini Item 3: Bolsas Kraft 50un -->
 <div class="flex items-center justify-between p-3.5 bg-surface-clean rounded-xl border border-border-hairline hover:border-border-hover transition-colors">
 <div class="flex items-center gap-3.5">
-<div class="w-14 h-14 bg-surface-soft rounded-lg flex items-center justify-center p-1 shrink-0 border border-border-hairline">
-<img class="w-full h-full object-contain" data-alt="Pila ordenada de bolsas de papel kraft ecologico color marron natural resistente para panaderia y delivery de alimentos, fondo blanco de estudio con sombra sutil y atmosfera pulcra y confiable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw"/>
+<div class="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl flex items-center justify-center p-2 shrink-0 border border-slate-100 shadow-xs group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain drop-shadow-xs" data-alt="Pila ordenada de bolsas de papel kraft ecologico color marron natural resistente para panaderia y delivery de alimentos, fondo blanco de estudio con sombra sutil y atmosfera pulcra y confiable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw"/>
 </div>
 <div>
 <h4 class="text-body-md font-body-md font-bold text-on-surface">Bolsa Kraft N°25 (Paq. x 50un)</h4>
@@ -486,7 +470,7 @@
   <div class="max-w-[1360px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
       <div>
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-amber-800 font-label-md text-label-md mb-2 font-bold">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-amber-50 border border-amber-200/90 rounded-full text-amber-900 font-label-md text-label-md mb-2 font-bold shadow-xs">
           <span class="material-symbols-outlined text-[16px] text-amber-600">local_fire_department</span>
           <span>Despacho Rápido en Lima</span>
         </div>
@@ -507,8 +491,8 @@
             <span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">100% Bagazo</span>
             <span class="text-xs text-outline font-mono">PAM-1000L</span>
           </div>
-          <a href="producto.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
-            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3NlAh_Rk2hGSsCi5acL4ARL7E4fL661DMM75BUoXjq6FobCGBjzHD9S7KgoWE5NV6rIl_Ahp0gDcP_h40suC74NYSKfI_TQKi6ejh5hKhv-pPWWH0lxXX0v7xuxehxzY-sRDaLAmy2Rb2MVaduC1UvtDr4BRoOYLzzRN_-QIMqWzkMYnp3GYV4ZiM2mxlygTg3sPvoczl1eE43cymhTzra0UGIsFXnKVBq3lHg4mnbd7BT4Xp4WQbg" alt="Pamolsa Deli 1Lt">
+          <a href="producto.html" class="w-full h-64 sm:h-72 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 rounded-2xl mb-5 p-5 flex items-center justify-center overflow-hidden block border border-slate-100 group-hover:border-blue-200 transition-all shadow-xs">
+            <img class="max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3NlAh_Rk2hGSsCi5acL4ARL7E4fL661DMM75BUoXjq6FobCGBjzHD9S7KgoWE5NV6rIl_Ahp0gDcP_h40suC74NYSKfI_TQKi6ejh5hKhv-pPWWH0lxXX0v7xuxehxzY-sRDaLAmy2Rb2MVaduC1UvtDr4BRoOYLzzRN_-QIMqWzkMYnp3GYV4ZiM2mxlygTg3sPvoczl1eE43cymhTzra0UGIsFXnKVBq3lHg4mnbd7BT4Xp4WQbg" alt="Pamolsa Deli 1Lt">
           </a>
           <span class="text-xs font-bold text-primary block mb-1">Pamolsa Bio Line</span>
           <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
@@ -542,8 +526,8 @@
             <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded-full">Abarrote Horeca</span>
             <span class="text-xs text-outline font-mono">COC-5L</span>
           </div>
-          <a href="catalogo.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
-            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg" alt="Aceite Cocinero 5L">
+          <a href="catalogo.html" class="w-full h-64 sm:h-72 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 rounded-2xl mb-5 p-5 flex items-center justify-center overflow-hidden block border border-slate-100 group-hover:border-blue-200 transition-all shadow-xs">
+            <img class="max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0v9fnqqtmRTEFeJiHwozRlO0u8Ee48G7Ke-16y7G10iVHkOobPOYtCbnEY2rPSkLKmROL8IFigZLIoNQBw_AtmW3FCUgcl_l9Yb3vVnNLhpQWkhDcd7xzFUxNtxQODg6W8MlqcMd5Mxp5JVjIDe85t51IJymRAAmYI028ltLNor-OCYZW4BmRWyurO8x7AYXfdTK7GZwfvJghWRhEJkXYdnyVSkaCba3UqP3BtJob7d4S_0MlIVDpg" alt="Aceite Cocinero 5L">
           </a>
           <span class="text-xs font-bold text-primary block mb-1">Alicorp Oficial</span>
           <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
@@ -577,8 +561,8 @@
             <span class="bg-secondary-fixed text-secondary-container border border-amber-bright/40 text-[11px] font-bold px-2 py-0.5 rounded-full">-15% Oferta</span>
             <span class="text-xs text-outline font-mono">BIO-REY-99</span>
           </div>
-          <a href="producto.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
-            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7l23ueJUgNmfr0lfKduRE3U-4goYuTzRxX8Z4nkyXX8Df9Ayk2-LFce0zk-ylVdsENrxuAMXw_-ujaJtMOgBi3U-Y4ICFKVNv7YfLafbqkJ3A1mFea5m6ONQ4KEwlMiHmCm1M_qKvz9kD7cLThHlFyqm5feAf-r_V90ZIL99FgUHfXXYz-VUMtG0oa0aTimx5J3MVwaK77m28HPkSbUlmigLeV63SxdycbFASa4a3Tau2hdb0s7YZdw" alt="Reyma 3 Divisiones">
+          <a href="producto.html" class="w-full h-64 sm:h-72 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 rounded-2xl mb-5 p-5 flex items-center justify-center overflow-hidden block border border-slate-100 group-hover:border-blue-200 transition-all shadow-xs">
+            <img class="max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7l23ueJUgNmfr0lfKduRE3U-4goYuTzRxX8Z4nkyXX8Df9Ayk2-LFce0zk-ylVdsENrxuAMXw_-ujaJtMOgBi3U-Y4ICFKVNv7YfLafbqkJ3A1mFea5m6ONQ4KEwlMiHmCm1M_qKvz9kD7cLThHlFyqm5feAf-r_V90ZIL99FgUHfXXYz-VUMtG0oa0aTimx5J3MVwaK77m28HPkSbUlmigLeV63SxdycbFASa4a3Tau2hdb0s7YZdw" alt="Reyma 3 Divisiones">
           </a>
           <span class="text-xs font-bold text-primary block mb-1">Reyma EcoPack</span>
           <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
@@ -612,8 +596,8 @@
             <span class="bg-emerald-surface text-tertiary-container border border-tertiary-fixed text-[11px] font-bold px-2 py-0.5 rounded-full uppercase">Eco Embalaje</span>
             <span class="text-xs text-outline font-mono">EMB-KRA-25</span>
           </div>
-          <a href="catalogo.html" class="w-full h-44 bg-surface-soft rounded-xl mb-4 p-3 flex items-center justify-center overflow-hidden block">
-            <img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw" alt="Bolsa Kraft N°25">
+          <a href="catalogo.html" class="w-full h-64 sm:h-72 bg-gradient-to-b from-slate-50 via-white to-blue-50/20 rounded-2xl mb-5 p-5 flex items-center justify-center overflow-hidden block border border-slate-100 group-hover:border-blue-200 transition-all shadow-xs">
+            <img class="max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRBOa2fYrewtCR1jbbc05hexcxiMQGd6hzBThafszzJmNZ55zpy5YjM27sJgSP1uTq8Gx4uS2wUr1kRfcNSyai_lADqTe3B61sMlIKh_kD0VC_0H-SwWBB-pM14mlWieayrc10S67EkabLiYC1whGE_66yOA6kPmOZuFHG-4AM0x4pC2DcDSlof1Iqhnrs5Fzda4TLQ2Y7fPpcdHzlFP5iULgWgTUS5Ypb2QmV_uk0_12kxTo8D3ONw" alt="Bolsa Kraft N°25">
           </a>
           <span class="text-xs font-bold text-primary block mb-1">Cian Lee Pro</span>
           <h3 class="font-bold text-on-surface text-body-lg mb-1 group-hover:text-primary transition-colors line-clamp-2">
@@ -645,7 +629,7 @@
 
 <!-- 7. Banner Asesoría Personalizada B2B (+20 fardos) -->
 <section class="max-w-[1360px] mx-auto px-6 lg:px-12 py-10">
-  <div class="bg-primary text-surface-clean rounded-2xl p-6 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-md">
+  <div class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-surface-clean rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-lg border border-blue-700/40">
     <div class="relative z-10 space-y-3 max-w-2xl">
       <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold">
         <span class="material-symbols-outlined text-[16px]">pallet</span>

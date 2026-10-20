@@ -80,9 +80,10 @@ server.listen(PORT, () => {
   console.log(`🛒 Servidor Plaza Multipack ejecutándose exitosamente!`);
   console.log(`🌐 URL Local: http://localhost:${PORT}`);
   console.log(`📁 Rutas disponibles:`);
-  console.log(`   - Inicio:   http://localhost:${PORT}/index.html`);
-  console.log(`   - Catálogo: http://localhost:${PORT}/catalogo.html`);
-  console.log(`   - Producto: http://localhost:${PORT}/producto.html`);
-  console.log(`   - Checkout: http://localhost:${PORT}/checkout.html`);
+  console.log(`   - Inicio:    http://localhost:${PORT}/index.html`);
+  console.log(`   - Catálogo:  http://localhost:${PORT}/catalogo.html`);
+  console.log(`   - Producto:  http://localhost:${PORT}/producto.html`);
+  console.log(`   - Checkout:  http://localhost:${PORT}/checkout.html`);
+  console.log(`   - Dashboard: http://localhost:${PORT}/dashboard.html`);
   console.log(`======================================================\n`);
 });
